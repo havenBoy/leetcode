@@ -5,7 +5,7 @@ import java.util.HashMap;
 public class TwoSum {
 	
 	/*
-	 * 有且只有一个，只要找出立马跳出循环
+	 * 有且只有一个，只要找出立马跳出循环  号的
 	 * */
 	//时间复杂度为n2
 	public static int[] twoSum(int[] nums, int target) {
