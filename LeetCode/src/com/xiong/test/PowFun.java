@@ -16,17 +16,16 @@ public class PowFun {
 	 *	Output: 9.26100
 	 * 
 	 * */
-	//分解所有的幂次方，使其成为一元
+	//分解所有的幂次方，使其成为一元,无限分解下去
 	
 	public static double powfun(double num,int n) {
 		if (n == 0)
 			return 1;
 		if (n < 0) {
 			num = 1/num;
-			return powfun(num, -n);
-		} else {
-			return n%2 == 0 ? powfun(num*num, n/2) : num*powfun(num*num, n/2);
-		}
+			n = -n;
+		} 
+		return (n%2 == 0) ? powfun(num*num, n/2) : num*powfun(num*num, n/2);
 	}
 	
 	public static void main(String[] args) {
