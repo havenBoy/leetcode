@@ -2,6 +2,12 @@ package com.xiong.test;
 
 public class Palindrome {
 	
+	/**
+	 * 回文数的判断  
+	 * @param num
+	 * @return
+	 */
+	
 	public static boolean checkPalindrome(int num) {
 		StringBuilder stringBuilder = new StringBuilder(Integer.toString(num)).reverse();
 		StringBuilder string = new StringBuilder(Integer.toString(num));
