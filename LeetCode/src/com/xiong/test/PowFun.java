@@ -1,9 +1,5 @@
 package com.xiong.test;
-/**
- * @author 作者:XiaoXiong
- * @version 创建时间：2018年4月9日 下午9:09:34
- * 类说明
- */
+
 public class PowFun {
 	
 	/**
@@ -16,7 +12,6 @@ public class PowFun {
 	 *	Output: 9.26100
 	 * 
 	 * */
-	//分解所有的幂次方，使其成为一元,无限分解下去
 	
 	public static double powfun(double num,int n) {
 		if (n == 0)

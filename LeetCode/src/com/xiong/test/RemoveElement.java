@@ -4,11 +4,6 @@ import java.util.HashSet;
 import java.util.Set;
 
 
-/**
- * @author 作者:XiaoXiong
- * @version 创建时间：2018年4月9日 下午10:39:26
- * 类说明
- */
 public class RemoveElement {
 	
 	/**
@@ -19,7 +14,6 @@ public class RemoveElement {
 	 * @return
 	 */
 	
-	//不重复的数组中的数字的个数  但结果不能返回正常的数组
 	public static int removeElement(int[] nums) {
 		Set<Integer> set = new HashSet<Integer>();
 		for (int i = 0; i < nums.length; i++) {

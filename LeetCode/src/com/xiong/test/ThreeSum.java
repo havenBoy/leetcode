@@ -8,13 +8,7 @@ import java.util.Set;
 
 public class ThreeSum {
 	
-	/**
-	 * 找出一个给定数组中，任意三个数字之和等于目标值0 （可扩展为任意值），返回所有子集的集合
-	 */
-	
-	//此种解决办法只是时间效率最低的，运算时间可能会超出规定的时间
 	public static List<List<Integer>> threeSum(int[] array) {
-		//先排序可以有效的去除相同的数组，不针对数组的顺序
 		Arrays.sort(array);
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		List<List<Integer>> listNew = new ArrayList<List<Integer>>();
@@ -36,7 +30,6 @@ public class ThreeSum {
 		}
 		return listNew;
 	}
-	//用于现实出找到结果集显示
 	public static void show(List<List<Integer>> list) {
 		for (List<Integer> list2 : list) {
 			for (int i = 0; i < list2.size(); i++) {
@@ -45,7 +38,6 @@ public class ThreeSum {
 			System.out.println("");
 		}
 	}
-	//测试
 	public static void main(String[] args) {
 		int[] array = {-4,-1,-1,0,1,1,1,2};
 		List<List<Integer>> listNew = threeSum(array);

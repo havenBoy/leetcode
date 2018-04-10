@@ -4,10 +4,6 @@ import java.util.HashMap;
 
 public class TwoSum {
 	
-	/*
-	 * 有且只有一个，只要找出立马跳出循环  号的
-	 * */
-	//时间复杂度为n2
 	public static int[] twoSum(int[] nums, int target) {
 		int[] array = new int[2];
 		for (int i = 0; i < nums.length-1; i++) {
@@ -22,7 +18,6 @@ public class TwoSum {
 		return array;
 	}
 	
-	//另外一种是以一个数字为准，找到数组中另外的一个数字，那一招一
 	public static int[] twoSum1(int[] nums,int target) {
 		int[] array = new int[2];
 		HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
@@ -38,7 +33,6 @@ public class TwoSum {
 		}
 		return array;
 	}
-	//测试
 	public static void main(String[] args) {
 		int[] nums = {2, 7, 11, 15};
 		int target = 18;
