@@ -52,12 +52,18 @@ public class StockProblem {
 		}
 		return profit;
 	}
-	
+/*	//允许2笔交易     找出2组数字，使其差值的和最大  并且是从左到右的顺序
+	public static int getSellBest3(int[] nums) {
+		List<Integer> list = new ArrayList<>();
+
+	}*/
 	public static void main(String[] args) {
-		int[] nums = {7, 1, 5, 3, 6, 4};
+		
+		int[] nums = {6,1,3,2,4,7};
 		System.out.println(getSell(nums));
 		System.out.println(getSellBest(nums));
 		System.out.println(getSellBest2(nums));
+		//System.out.println(getSellBest3(nums));
 	}
 
 }
