@@ -1,2 +1,2 @@
 # LeetCode
-leetcode problems sloved
+leetcode problems solved
