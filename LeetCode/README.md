@@ -1,5 +1,5 @@
 # LeetCode
-leetcode problems solved
+欢迎来到[我的博客园](http://www.cnblogs.com/zxx-813/)
 
 1.丑数的判断    自然数第n个丑数(质数因子只有2,3,5,1本身算是一个丑数)
 
