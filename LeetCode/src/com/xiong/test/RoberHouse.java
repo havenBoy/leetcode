@@ -2,6 +2,23 @@ package com.xiong.test;
 
 public class RoberHouse {
 	
+	/***
+	 * 计算数组中连续子数组最大的和
+	 * @param nums
+	 * @return
+	 */
+	public static int getMaxRes(int[] nums) {
+		if (nums.length == 0) return 0;
+		int result = 0;
+		int max = 0;
+		for (int i = 0; i < nums.length; i++) {
+			if (result <= 0) result = nums[i];
+			else 
+				result += nums[i] ;
+			if (result > max) max = result;
+		}
+		return max;
+	}
 	
 	/***
 	 * 属于动态规划问题
@@ -45,6 +62,9 @@ public class RoberHouse {
 	
 	
 	public static void main(String[] args) {
+		int[] numss = {-3,-1,-1,-3};
+		System.out.println(getMaxRes(numss));
+		
 		int[] nums = {2,5,3,4,5};
 		System.out.println(robber(nums));
 		System.out.println(robber2(nums));
