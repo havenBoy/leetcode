@@ -47,7 +47,40 @@ public class MissingNum {
 		return res;
 	}
 	
+	/***
+	 * Given an unsorted integer array, 
+	 * find the smallest missing positive integer.
+	 * 找出最小的那个，从1开始
+	 * @param nums
+	 */
+    public static int firstMissingPositive(int[] nums) {
+        Arrays.sort(nums);
+        int low = 0, high = nums.length,index;
+        while (low <= high) {
+        	int mid = (low + high)/2;
+        	if (nums[mid] <= 1) {
+				low = mid + 1;
+			} else {
+				high = mid - 1;
+			}
+        }
+        index = low;
+        int num = 1;
+        for (int i = index; i < nums.length; i++) {
+			if (nums[i] != num) {
+				num = i;
+				break;
+			} else {
+				num ++ ;
+			}
+		}
+        return num;
+    }
+	
 	public static void main(String[] args) {
+		int[] num = {5,4,-1,2,1};
+		System.out.println(firstMissingPositive(num)+ "gg");
+		
 		int[] nums = {9,6,4,2,8,5,7,0,1};
 		System.out.println(missingNumber3(nums));
 		System.out.println(missingNumber2(nums));
