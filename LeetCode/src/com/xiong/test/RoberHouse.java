@@ -3,6 +3,7 @@ package com.xiong.test;
 public class RoberHouse {
 	
 	/***
+	 * 也是属于动态规划问题
 	 * 计算数组中连续子数组最大的和
 	 * @param nums
 	 * @return
@@ -10,7 +11,7 @@ public class RoberHouse {
 	public static int getMaxRes(int[] nums) {
 		if (nums.length == 0) return 0;
 		int result = 0;
-		int max = 0;
+		int max = Integer.MIN_VALUE;//防止数组中有负数的情况
 		for (int i = 0; i < nums.length; i++) {
 			if (result <= 0) result = nums[i];
 			else 
