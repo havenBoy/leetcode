@@ -8,7 +8,8 @@ import java.util.Set;
 /**
  * @author 作者:XiaoXiong
  * @version 创建时间：2018年4月21日 下午10:37:12
- * 类说明   2个数组的交集  以及2个数组的并集
+ * 类说明   2个数组的交集  （set的唯一性依次set）
+ * 以及2个数组的并集（set的唯一性以此set）
  */
 public class InterSectionArrays {
 	
