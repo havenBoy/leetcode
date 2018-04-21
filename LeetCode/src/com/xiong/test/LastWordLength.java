@@ -1,4 +1,7 @@
 package com.xiong.test;
+
+import java.util.Arrays;
+
 /**
  * @author 作者:XiaoXiong
  * @version 创建时间：2018年4月19日 下午10:50:59
@@ -38,6 +41,8 @@ public class LastWordLength {
 	}*/
 	
 	public static void main(String[] args) {
+		int[] nums = {1,2,3,4};
+		Arrays.toString(nums);
 		String string = "  ss";
 		System.out.println(lengthOfLastWord(string));
 	}
