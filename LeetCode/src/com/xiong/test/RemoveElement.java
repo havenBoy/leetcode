@@ -43,7 +43,16 @@ public class RemoveElement {
 		}
 		return nums.length-count;
 	}
-	
+	/***
+	 * 删除链表中重复的元素
+	 * @param head
+	 * @return
+	 */
+	public static ListNode removeDup(ListNode head) {
+		if(head == null || head.next == null) { return head;}
+		head.next = removeDup(head.next);
+		return head.val == head.next.val ? head.next : head;
+	}
 	
 	
 	public static void main(String[] args) {
