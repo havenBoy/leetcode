@@ -33,6 +33,24 @@ public class RoberHouse {
 		}
 		return upstairs(n-1) + upstairs(n-2);
 	}
+	/***
+	 * 斐波那契数列
+	 * 爬楼梯，一次可以爬1个或者2个，上n个台阶有多少方法（非递归）
+	 * @param n
+	 * @return
+	 */
+	public static int upstairs2(int n) {
+		if (n == 1 || n == 2) {
+			return n;
+		}
+		int[] array = new int[n+1];
+		array[0] = 1;
+		array[1] = 1;
+		for (int i = 2; i < array.length; i++) {
+			array[i] =array[i-1] + array[i-2];
+		}
+		return array[n];
+	}
 	//打劫问题
 	public static int robber(int[] nums) {
 		int profit = 0;
@@ -70,6 +88,7 @@ public class RoberHouse {
 		System.out.println(robber(nums));
 		System.out.println(robber2(nums));
 		System.out.println(upstairs(5));
+		System.out.println(upstairs2(5));
 	}
 
 }
