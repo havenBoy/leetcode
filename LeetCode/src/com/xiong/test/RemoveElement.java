@@ -32,16 +32,14 @@ public class RemoveElement {
 	 * @return
 	 */
 	public static int remove(int[] nums, int val) {
-		int count=0 ,index = 0;
+		if (nums.length == 0) return 0;
+		int index = 0;
 		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] == val) {
-				int temp = nums[i];
-				nums[i] = nums[index];
-				nums[index] = temp;
-				count++;
-			}
+			if (nums[i] != val) nums[index++] = nums[i];
 		}
-		return nums.length-count;
+		int[] array = new int[index+1];
+		for (int i = 0; i < index; i++) array[i] = nums[i];
+		return index;
 	}
 	/***
 	 * 删除链表中重复的元素
