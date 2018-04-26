@@ -9,7 +9,7 @@ import java.util.Set;
  * @author 作者:XiaoXiong
  * @version 创建时间：2018年4月21日 下午10:37:12
  * 类说明   2个数组的交集  （set的唯一性依次set）
- * 以及2个数组的并集（set的唯一性以此set）
+ * 以及2个排好序数组的并集（set的唯一性以此set）
  */
 public class InterSectionArrays {
 	
@@ -43,6 +43,10 @@ public class InterSectionArrays {
 		}
 		return nums;
 	}
+	
+/*	public static int[] merge(int[] nums1, int[] nums2) {
+		
+	}*/
 	
 	public static void main(String[] args) {
 		int[] nums1 = {1,2,2,1};
