@@ -43,15 +43,25 @@ public class InterSectionArrays {
 		}
 		return nums;
 	}
-	
-/*	public static int[] merge(int[] nums1, int[] nums2) {
-		
-	}*/
+	//{1,4,5,0,0}  {2,3}
+	public static int[] merge(int[] nums1, int[] nums2) {
+		for (int i = 0; i < nums2.length; i++) {
+			if (nums1[i] > nums2[i]) {
+				int temp = nums2[i];
+				for (int j = i; j < nums2.length; j++) {
+					nums1[j+1]  = nums1[j];
+				}
+				nums1[i] = temp;
+			}
+		}
+		return nums1;
+	}
 	
 	public static void main(String[] args) {
-		int[] nums1 = {1,2,2,1};
-		int[] nums2 = {2,2};
-		Utils.show(interSection(nums1, nums2));
+		int[] nums1 = {1,3,4,0,0};
+		int[] nums2 = {2,5};
+		Utils.show(merge(nums1, nums2));
+		//Utils.show(interSection(nums1, nums2));
 	}
 
 }
