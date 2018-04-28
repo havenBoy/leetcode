@@ -1,6 +1,124 @@
 package com.xiong.test;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class CheckTree {
+	
+	 /***
+	  * 返回同深度的集合
+	  * @param root
+	  * @return
+	  */
+	 public List<List<Integer>> levelOrderBottom(TreeNode root) {
+		 List<List<Integer>> reslist = new ArrayList<List<Integer>>();
+		 List<Integer> list = new ArrayList<>();
+		 if(root != null) levelOrder(list, root);
+		 reslist.add(list);
+		 return reslist;
+	 }
+	 
+	 public static void levelOrder(List<Integer> list, TreeNode root) {
+		if (root != null) list.add(root.val);
+		levelOrder(list, root.left);
+		levelOrder(list, root.right);
+	}
+	 
+	/***
+	 * 反转一个二叉树，使得成为镜像的
+	 * @param root
+	 */
+	public static TreeNode invertTree(TreeNode root) {
+		if(root == null) return null;
+		TreeNode temp = root.left;
+		root.left = root.right;
+		root.right = temp;
+		invertTree(root.left);
+		invertTree(root.right);
+		return root;
+	}
+	
+	/***
+	 * 中序遍历
+	 * @param root
+	 * @return
+	 */
+    public static List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> list = new ArrayList<>();
+        if(root != null) inorderTraversalCheck(list, root);
+        return list;
+    }
+    
+    public static void inorderTraversalCheck(List<Integer> list, TreeNode root) {
+    	if (root.left != null) inorderTraversalCheck(list, root.left);
+        list.add(root.val);
+        if (root.right != null) inorderTraversalCheck(list, root.right);
+    }
+	
+	/***
+	 * 后序遍历，返回数字
+	 * @param root
+	 * @return
+	 */
+	public static List<Integer> postOrder(TreeNode root) {
+		List<Integer> list = new ArrayList<>();
+        if (root != null) PostaddOrder(list,root);
+        return list;
+	}
+	
+	public static void PostaddOrder(List<Integer> list, TreeNode root) {
+		if (root.left != null) PostaddOrder(list, root.left);
+		if (root.right != null) PostaddOrder(list, root.right);
+		if (root != null) list.add(root.val);
+	}
+	
+	/***
+	 * 前序遍历二叉树
+	 * @param root
+	 * @return
+	 */
+	public static List<Integer> preOrder(TreeNode root) {
+		List<Integer> list = new ArrayList<>();
+        if (root != null) PreaddOrder(list,root);
+        return list;
+	}
+	
+	public static void PreaddOrder(List<Integer> list, TreeNode root) {
+		if (root != null) list.add(root.val);
+		if (root.left != null) PreaddOrder(list, root.left);
+		if (root.right != null) PreaddOrder(list, root.right);
+	}
+	
+	/***
+	 * 判断二叉树是否是镜像对称
+	 * @param root
+	 * @return
+	 */
+	public static boolean isSym(TreeNode root) {
+		if(root == null) return true;
+		return ischeckSym(root.left,root.right);
+	}
+	
+	public static boolean ischeckSym(TreeNode left, TreeNode right) {
+		if(left == null && right == null) return true;
+		if(left == null || right == null) return false;
+		if (left.val == right.val)  return ischeckSym(left.left,right.right) && ischeckSym(left.right, right.left);
+	    return false;
+	}
+	
+	
+	/***
+	 * 判断是否是平衡二叉树
+	 * @param root
+	 * @return
+	 */
+	public static boolean isBalance(TreeNode root) {
+		if (root == null) return true;
+		int left = maxDepth(root.left);
+		int right = maxDepth(root.right);
+		if (left - right > 1 || left - right < -1) return false;
+		return isBalance(root.left) && isBalance(root.right);
+	}
 	
 	/**
 	 * 判断2个二叉树是否相同    递归的思想
