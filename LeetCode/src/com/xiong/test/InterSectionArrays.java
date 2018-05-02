@@ -45,14 +45,15 @@ public class InterSectionArrays {
 	}
 	//{1,4,5,0,0}  {2,3}
 	public static int[] merge(int[] nums1, int[] nums2) {
-		for (int i = 0; i < nums2.length; i++) {
-			if (nums1[i] > nums2[i]) {
-				int temp = nums2[i];
-				for (int j = i; j < nums2.length; j++) {
-					nums1[j+1]  = nums1[j];
+		for (int i = 0, j = 0; i < nums2.length && j < nums1.length; i++) {
+			if (nums1[j] > nums2[i]) {
+				int temp = nums1[j];
+				for (int k = j; k < nums2.length; k++) {
+					nums1[k+1] = nums1[k]; 
 				}
-				nums1[i] = temp;
+				nums1[j] = temp;
 			}
+			j++;
 		}
 		return nums1;
 	}
