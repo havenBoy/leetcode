@@ -1,6 +1,7 @@
 package com.xiong.test;
 
 import java.util.HashSet;
+import java.util.LinkedList;
 import java.util.Set;
 
 
@@ -11,14 +12,23 @@ public class RemoveElement {
 	   Your function should return length = 2, 
 	   with the first two elements of nums being 1 and 2 respectively.
 	   It doesn't matter what you leave beyond the new length.
+	   keep the order
 	 * @param nums
 	 * @return
 	 */
 	
 	public static int removeElement(int[] nums) {
 		Set<Integer> set = new HashSet<Integer>();
+		LinkedList<Integer> linkedList = new LinkedList<Integer>();
 		for (int i = 0; i < nums.length; i++) {
+			int size = set.size();
 			set.add(nums[i]);
+			if (size != set.size()) {
+				linkedList.add(nums[i]);
+			}
+		}
+		for (int i = 0; i < set.size(); i++) {
+			nums[i] = linkedList.get(i);
 		}
 		return set.size();
 	}
@@ -54,10 +64,10 @@ public class RemoveElement {
 	
 	
 	public static void main(String[] args) {
-		int[] num = {3,2,2,3};
-		System.out.println(remove(num, 3));
-		int[] nums = {1,1,1,2,2};
-		System.out.println(removeElement(nums));
+//		int[] num = {3,2,2,3};
+//		System.out.println(remove(num, 3));
+//		int[] nums = {1,1,1,2,2};
+//		System.out.println(removeElement(nums));
 	}
 
 }
