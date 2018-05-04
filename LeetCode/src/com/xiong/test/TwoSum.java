@@ -4,6 +4,30 @@ import java.util.HashMap;
 
 public class TwoSum {
 	
+	
+	
+	public static int[] twoSums(int[] nums,int target) {
+		int[] array = new int[2];
+		HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
+		for (int i = 0; i < nums.length; i++) {
+			map.put(nums[i], i+1);
+		}
+		for (int i = 0; i < nums.length; i++) {
+			if (map.containsKey(target-nums[i])) {
+				array[0] = nums[i];
+				array[1] = target-nums[i];
+				break;
+			}
+		}
+		return array;
+	}
+	
+	/***
+	 * 2个数字的组合等于目标值
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public static int[] twoSum(int[] nums, int target) {
 		int[] array = new int[2];
 		for (int i = 0; i < nums.length-1; i++) {
