@@ -64,7 +64,7 @@ public class SqurtNum {
 	
 	/**
 	 * @param num
-	 * 算出一个数字的平方根
+	 * 算出一个数字的平方根（二分法查找的时间复杂度依然较高）
 	 */
 	public static int getSqrt(int num) {
 		int low=1,high=num;
@@ -81,8 +81,19 @@ public class SqurtNum {
 		return high;
 	}
 	
+	public static int sqrt(int num) {
+		int k = 0;
+	    for (long b = num; b >= 1; b /= 2) {
+	        while ( (k+b)*(k+b) <= num) 
+	            k += b;   
+	    }
+	    return k;
+	}
+	
 	public static void main(String[] args) {
-		//System.out.println(getSqrt(99));
+		System.out.println((2^31-1) < 2147395599);
+		System.out.println(sqrt(2147395599));
+		System.out.println(getSqrt(2147395599));
 		//System.out.println(isPowerOfTwo(128));
 		System.out.println(isPowerOfThree2(80));
 	}
