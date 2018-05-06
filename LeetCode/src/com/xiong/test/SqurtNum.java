@@ -2,6 +2,41 @@ package com.xiong.test;
 
 public class SqurtNum {
 	
+	/**
+	 * 不使用乘法和除法以及模运算计算除法
+	 * @param dividend
+	 * @param divisor
+	 * @return
+	 */
+    public static int divide(int dividend, int divisor) {
+    	int result = 0;
+        if (dividend < 0 && divisor > 0) {
+			dividend = -dividend;
+			result = (int)dividePre(dividend, divisor);
+			result = -result;
+		} else if (dividend > 0 && divisor < 0){
+			divisor = -divisor;
+			result = (int)dividePre(dividend, divisor);
+			result = -result;
+		} else if (dividend < 0 && divisor < 0) {
+			divisor = -divisor;
+			dividend = -dividend;
+			result = (int)dividePre(dividend, divisor);
+		} else {
+	        result = (int)dividePre(dividend, divisor);
+		}
+        return result;
+    }
+    
+    public static long dividePre(long dividend, long divisor) {
+    	long res = 0,count = 0;
+		while (res <= dividend) {
+			res += divisor;
+			count+= 1;
+		}
+		return count-1;
+	}
+	
 	/***
 	 * 判断一个数字是否是2的幂次方
 	 * 最原始的办法，但是时间复杂度太高
@@ -80,7 +115,11 @@ public class SqurtNum {
 		}
 		return high;
 	}
-	
+	/**
+	 * 算出一个数字的平方根
+	 * @param num
+	 * @return
+	 */
 	public static int sqrt(int num) {
 		int k = 0;
 	    for (long b = num; b >= 1; b /= 2) {
@@ -91,6 +130,8 @@ public class SqurtNum {
 	}
 	
 	public static void main(String[] args) {
+
+		System.out.println(divide(-2147483648, -1));
 		System.out.println((2^31-1) < 2147395599);
 		System.out.println(sqrt(2147395599));
 		System.out.println(getSqrt(2147395599));
