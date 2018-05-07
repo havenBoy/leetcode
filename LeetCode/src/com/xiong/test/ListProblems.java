@@ -7,6 +7,28 @@ package com.xiong.test;
  */
 public class ListProblems {
 	
+	/**
+	 * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
+       Output: 7 -> 0 -> 8
+       Explanation: 342 + 465 = 807.
+	 * @param l1
+	 * @param l2
+	 * @return
+	 */
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        return combine(l1,l2,0);
+    }
+    
+    public static ListNode combine(ListNode l1, ListNode l2, int flag) {
+		if(l1 == null && l2 == null && flag == 0) return null;
+		int sum = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + flag;
+		flag = sum >= 10 ? 1 : 0;
+		int value = sum >= 10 ? sum-10 : sum;
+		ListNode node = new ListNode(value);
+		node.next = combine(l1 == null ? null : l1.next, l2==null ? null : l2.next, flag);
+		return node;
+	}
+	
 	/***
 	 * 删除链表中重复的数字
 	 * @param head
