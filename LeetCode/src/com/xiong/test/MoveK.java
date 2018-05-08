@@ -17,6 +17,7 @@ public class MoveK {
 	}
 	
 	public static int[] move(int[] nums, int k) {
+		k = k > nums.length ? k-=nums.length : k;//判断K是否大于数组的长度
 		nums = reverse(nums, 0, nums.length-1-k);
 		nums = reverse(nums, nums.length-k, nums.length-1);
 		return reverse(nums, 0, nums.length-1);
