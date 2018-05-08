@@ -67,12 +67,44 @@ public class ListProblems {
 	
 	/***
 	 * 反转链表
-	 * @param node
+	 * @param head
 	 * @return
 	 */
-	public static ListNode reverse(ListNode node) {
-		return null;
+	public static ListNode reverse(ListNode head) {
+		if(head == null || head.next == null) return head;
+		ListNode p = head,newHead = null;
+		while (p != null) {
+			ListNode temp = p.next;
+			p.next = newHead;
+			newHead = p;
+			p = temp;
+		}
+		return newHead;
 	}
+	/**
+	 * 在K位置处旋转列表
+	 * @param head
+	 * @param k
+	 * @return
+	 */
+	public static ListNode rotate(ListNode head, int k) {
+		if(head == null || k == 0) return head;
+		int count = 1;
+		ListNode p = head;
+		while (p.next != null) {//遍历计算出列表的长度
+			++count;
+			p = p.next;
+		}
+		p.next = head;
+		count = count - k % count;//去除k大于列表长度的情况
+		for (int i = 0; i < count; i++) {
+			p = p.next;
+		}
+		ListNode newHead = p.next;
+		p.next = null;
+		return newHead;
+	}
+	
 	
 	/***
 	 * 遍历一遍得到链表的倒数第K个节点
