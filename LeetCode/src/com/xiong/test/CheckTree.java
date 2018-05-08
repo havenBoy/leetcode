@@ -119,6 +119,24 @@ public class CheckTree {
 		if (left - right > 1 || left - right < -1) return false;
 		return isBalance(root.left) && isBalance(root.right);
 	}
+	/**
+	 * 判断一棵树是否是二叉搜索树
+	 * @param root
+	 * @return
+	 */
+	
+	public static boolean isBST(TreeNode root) {
+		return isBSTpre(root, Long.MIN_VALUE, Long.MAX_VALUE);
+	}
+	
+	public static boolean isBSTpre(TreeNode root, long min, long max) {
+		if(root == null) return true;
+		if (min < root.val && max > root.val) {
+			return isBSTpre(root.left, min, root.val) && isBSTpre(root.right, root.val, max);
+		} else {
+			return false;
+		}
+	}
 	
 	/**
 	 * 判断2个二叉树是否相同    递归的思想
@@ -155,5 +173,5 @@ public class CheckTree {
 		int right = minDepth(node.right) + 1;
 		return left > right ? right : left ;
 	}
-
+	
 }
