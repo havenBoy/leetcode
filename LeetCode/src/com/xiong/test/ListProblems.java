@@ -81,6 +81,71 @@ public class ListProblems {
 		}
 		return newHead;
 	}
+	
+	/**
+	 * 判断一个链表是否有环
+	 * 2个指针，一个一次走一步，另外一个一次走2步
+	 * @param head
+	 * @return
+	 */
+	public static boolean hasCycle(ListNode head) {
+		if(head == null) return false;
+		ListNode slow = head, fast = head;
+		while (fast.next != null && fast.next.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if(slow == fast) return true;
+		}
+		return false;
+	}
+	
+	/**
+	 * 如果有环，返回环的起始节点 否则返回空
+	 * @param head
+	 * @return
+	 */
+	public static ListNode markNode(ListNode head) {
+		if(head == null) return null;
+		ListNode slow = head, fast = head;
+		while (fast != null && fast.next != null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if(slow == fast) {
+				fast = head;
+				while (fast != slow) {
+					fast = fast.next;
+					slow = slow.next;
+				} 
+				return fast;
+			}
+		}
+		return null;
+	}
+	
+	/**
+	 * 如果有环的话，返回环的长度
+	 * @param head
+	 * @return
+	 */
+	public static int cycleLength(ListNode head) {
+		if(head == null) return 0;
+		ListNode slow = head, fast = head;
+		int count = 0;
+		while(fast.next != null && fast.next.next == null) {
+			slow = slow.next;
+			fast = fast.next.next;
+			if(slow == fast) {
+				while(fast.next != null && fast.next.next == null) {
+					slow = slow.next;
+					fast = fast.next.next;
+					count++;
+					if(slow == fast) break;
+				}
+				break;
+			}
+		}
+		return count;
+	}
 	/**
 	 * 在K位置处旋转列表
 	 * @param head
