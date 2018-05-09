@@ -90,6 +90,30 @@ public class CheckTree {
 	}
 	
 	/***
+	 * 前序遍历二叉树
+	 * @param root
+	 * @return
+	 */
+	public static int preSumRoot(TreeNode root) {
+		int sum = 0;
+		if (root != null) {
+			sum = root.val; 
+			preSum(sum,root);
+		}
+        return sum;
+	}
+	
+	public static void preSum(int sum, TreeNode root) {
+		if(root == null) return;
+		int leftSum=sum, rightSum=sum;
+		if (root.left != null) leftSum = leftSum*10 + root.left.val;
+		if (root.right != null) rightSum = rightSum*10 + root.right.val;
+		sum = leftSum + rightSum;
+		preSum(rightSum, root.left);
+		preSum(rightSum, root.right);
+	}
+	
+	/***
 	 * 判断二叉树是否是镜像对称
 	 * @param root
 	 * @return
