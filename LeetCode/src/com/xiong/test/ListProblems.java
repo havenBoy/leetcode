@@ -101,6 +101,8 @@ public class ListProblems {
 	
 	/**
 	 * 如果有环，返回环的起始节点 否则返回空
+	 * 相遇时，一个节点赋值为起始节点，另外一个节点为相遇节点，下一次相遇的时候，
+	 * 相遇的节点即为环的起始节点
 	 * @param head
 	 * @return
 	 */
@@ -124,6 +126,7 @@ public class ListProblems {
 	
 	/**
 	 * 如果有环的话，返回环的长度
+	 * 从相遇的节点开始再一次遍历，计算下次相遇时经过的长度
 	 * @param head
 	 * @return
 	 */
