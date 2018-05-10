@@ -90,27 +90,19 @@ public class CheckTree {
 	}
 	
 	/***
-	 * 前序遍历二叉树
+	 * Sum Root to Leaf Numbers
 	 * @param root
 	 * @return
 	 */
 	public static int preSumRoot(TreeNode root) {
-		int sum = 0;
-		if (root != null) {
-			sum = root.val; 
-			preSum(sum,root);
-		}
-        return sum;
+		return preSum(0, root);
 	}
 	
-	public static void preSum(int sum, TreeNode root) {
-		if(root == null) return;
-		int leftSum=sum, rightSum=sum;
-		if (root.left != null) leftSum = leftSum*10 + root.left.val;
-		if (root.right != null) rightSum = rightSum*10 + root.right.val;
-		sum = leftSum + rightSum;
-		preSum(rightSum, root.left);
-		preSum(rightSum, root.right);
+	public static int preSum(int sum, TreeNode root) {
+		if(root == null) return 0;
+		sum = sum*10 + root.val;
+		if(root.left == null && root.right == null) return sum;
+		return preSum(sum, root.left) + preSum(sum, root.right);
 	}
 	
 	/***
@@ -155,11 +147,8 @@ public class CheckTree {
 	
 	public static boolean isBSTpre(TreeNode root, long min, long max) {
 		if(root == null) return true;
-		if (min < root.val && max > root.val) {
-			return isBSTpre(root.left, min, root.val) && isBSTpre(root.right, root.val, max);
-		} else {
-			return false;
-		}
+		if (min < root.val && max > root.val) return isBSTpre(root.left, min, root.val) && isBSTpre(root.right, root.val, max);
+        else  return false;
 	}
 	
 	/**
