@@ -4,6 +4,25 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CheckTree {
+
+	/**
+	 * 给定一个正整数，返回所有符合二叉搜索树的个数
+	 * 实质是亚特兰数
+	 * @param n
+	 * @return
+	 */
+	
+	public static int numTrees(int n) {
+		int[] arr = new int[n+1];
+		arr[0] = 1;
+		arr[1] = 1;
+        for(int i = 2 ; i <= n ; i ++){  
+        	for(int j = 1; j <= i; j++) {
+        		arr[i] += arr[i-j] * arr[j-1];
+        	}
+        }  
+        return arr[n];
+	}
 	
 	 /***
 	  * 返回同深度的集合
@@ -147,7 +166,8 @@ public class CheckTree {
 	
 	public static boolean isBSTpre(TreeNode root, long min, long max) {
 		if(root == null) return true;
-		if (min < root.val && max > root.val) return isBSTpre(root.left, min, root.val) && isBSTpre(root.right, root.val, max);
+		if (min < root.val && max > root.val) 
+			return isBSTpre(root.left, min, root.val) && isBSTpre(root.right, root.val, max);
         else  return false;
 	}
 	
