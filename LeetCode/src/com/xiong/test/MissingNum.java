@@ -1,6 +1,8 @@
 package com.xiong.test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class MissingNum {
 	
@@ -54,32 +56,23 @@ public class MissingNum {
 	 * @param nums
 	 */
     public static int firstMissingPositive(int[] nums) {
-        Arrays.sort(nums);
-        int low = 0, high = nums.length,index;
-        while (low <= high) {
-        	int mid = (low + high)/2;
-        	if (nums[mid] <= 1) {
-				low = mid + 1;
-			} else {
-				high = mid - 1;
-			}
-        }
-        index = low;
-        int num = 1;
-        for (int i = index; i < nums.length; i++) {
-			if (nums[i] != num) {
-				num = i;
-				break;
-			} else {
-				num ++ ;
-			}
+    	List<Integer> list = new ArrayList<>();
+        int index = 1;
+        for (int i = 0; i < nums.length; i++) {
+			list.add(nums[i]);
 		}
-        return num;
+        while(index <= nums.length) {
+        	if(list.contains(index)) 
+        		index++;
+        	else 
+        		break;
+        }
+        return index;
     }
 	
 	public static void main(String[] args) {
 		int[] num = {5,4,-1,2,1};
-		System.out.println(firstMissingPositive(num)+ "gg");
+		System.out.println(firstMissingPositive(num));
 		
 		int[] nums = {9,6,4,2,8,5,7,0,1};
 		System.out.println(missingNumber3(nums));
