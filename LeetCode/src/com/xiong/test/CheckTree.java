@@ -24,6 +24,26 @@ public class CheckTree {
         return arr[n];
 	}
 	
+	
+	/**
+	 * 从一个有序的数组构建一个搜索二叉树
+	 * 递归的方式利用二分法获取排序后中间的数值
+	 * @param nums
+	 * @return
+	 */
+	public static TreeNode sortedArrayToBST(int[] nums) {
+		return createTreeNode(nums, 0, nums.length-1);
+	}
+	
+	public static TreeNode createTreeNode(int nums[], int low, int high) {
+		if(low > high) return null;
+		int mid = (low + high)/2;
+		TreeNode root = new TreeNode(nums[mid]);
+		root.left = createTreeNode(nums, low, mid-1);
+		root.right = createTreeNode(nums, mid+1, high);
+		return root;
+	}
+	
 	 /***
 	  * 返回同深度的集合
 	  * @param root
