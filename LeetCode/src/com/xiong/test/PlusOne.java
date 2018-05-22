@@ -1,14 +1,20 @@
 package com.xiong.test;
 
-import java.util.Random;
-
 /**
  * 题目1：对数组中的最后一位进行加1的运算 [1,2,3,4]->[1,2,3,5]
  * 题目2：实现字符串的二进制加法  “111” + “11” = “1010”
+ * 题目3：不使用+ -运算，计算2数字之和
  * @author 作者:XiaoXiong
  * @version 创建时间：2018年4月18日 下午10:26:19
  */
 public class PlusOne {
+	
+	public static int sum(int a, int b) {
+		if(a == 0) return b;
+		int x = a ^ b;
+		int c = (a & b) << 1;
+		return sum(c, x);
+	}
 	
 	public static String binaryPlus(String a, String b) {
 		int aLen = a.length()-1, bLen = b.length()-1;
@@ -63,8 +69,7 @@ public class PlusOne {
 		System.out.println(binaryPlus("111", "1"));
 		int[] nums = {9,9,9};
 		Utils.show(plusOne(nums));
-		Random random = new Random();
-		System.out.println(random.nextInt(10));
+		System.out.println(sum(1, 2));
 	}
 
 }
