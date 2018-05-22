@@ -157,7 +157,8 @@ public class CheckTree {
 	public static boolean ischeckSym(TreeNode left, TreeNode right) {
 		if(left == null && right == null) return true;
 		if(left == null || right == null) return false;
-		if (left.val == right.val)  return ischeckSym(left.left,right.right) && ischeckSym(left.right, right.left);
+		if (left.val == right.val)  
+			return ischeckSym(left.left,right.right) && ischeckSym(left.right, right.left);
 	    return false;
 	}
 	
