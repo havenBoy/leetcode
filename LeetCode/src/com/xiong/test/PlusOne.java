@@ -9,13 +9,24 @@ package com.xiong.test;
  */
 public class PlusOne {
 	
+	/**
+	 * 计算2数之和
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public static int sum(int a, int b) {
 		if(a == 0) return b;
 		int x = a ^ b;
 		int c = (a & b) << 1;
 		return sum(c, x);
 	}
-	
+	/**
+	 * 字符串的二进制加法
+	 * @param a
+	 * @param b
+	 * @return
+	 */
 	public static String binaryPlus(String a, String b) {
 		int aLen = a.length()-1, bLen = b.length()-1;
 		int cLen = aLen > bLen ? aLen : bLen;
@@ -44,7 +55,11 @@ public class PlusOne {
 		}
 		return result.reverse().toString();
 	}
-	
+	/**
+	 * 数组的最后一个数字的"加法"
+	 * @param nums
+	 * @return
+	 */
 	public static int[] plusOne(int[] nums) {
 		int index = nums.length-1;
 		while(index >= 0) {
