@@ -1,5 +1,7 @@
 package com.xiong.test;
 
+import java.util.HashMap;
+
 public class SingleNum {
 	
 	/***不能占用多余的内存空间
@@ -10,7 +12,6 @@ public class SingleNum {
 	 * @return
 	 */
 	
-	
 	//一个数与自己做与操作为0,0与其他的数字做与结果为其他的数字
 	public static int getSingleNum(int[] nums) {
 		int res = 0;
@@ -19,19 +20,34 @@ public class SingleNum {
 		}
 		return res;
 	}
-/*	//三三出现，找出单独的数字
+	//三三出现，找出单独的数字（虽然实现，但是时间复杂度较高，待改善）
 	public static int getSingleThree(int[] nums) {
-		
+		HashMap<Integer, Integer> map = new HashMap<>();
+		for (int i = 0; i < nums.length; i++) {
+			map.put(nums[i], map.get(nums[i]) == null ? 1 : map.get(nums[i])+1);
+		}
+		for (Integer key : map.keySet()) {
+			if(map.get(key) == 1) return key;
+		}
+		return -1;
 	}
-	//2个单独出现的数字
+	//2个单独出现的数字（虽然实现，但是时间复杂度较高，待改善）
 	public static int[] getSingleNumTwo(int[] nums) {
-		
-	}*/
+		HashMap<Integer, Integer> map = new HashMap<>();
+		int[] res = new int[2];
+		int index = 0;
+		for (int i = 0; i < nums.length; i++) {
+			map.put(nums[i], map.get(nums[i]) == null ? 1 : map.get(nums[i])+1);
+		}
+		for (Integer key : map.keySet()) {
+		    if(map.get(key) == 1) res[index++] = key;
+		}
+		return res;
+	}
 	
 	public static void main(String[] args) {
-		System.out.println(1^2^3);
-		int[] nums = {1,1,2,3,3};
-		System.out.println(getSingleNum(nums));
+		int[] nums = {1,1,2,3};
+		Utils.show(getSingleNumTwo(nums));
 	}
 
 }
