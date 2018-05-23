@@ -1,7 +1,9 @@
 package com.xiong.test;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.List;
+import java.util.Stack;
 
 public class CheckTree {
 
@@ -11,7 +13,6 @@ public class CheckTree {
 	 * @param n
 	 * @return
 	 */
-	
 	public static int numTrees(int n) {
 		int[] arr = new int[n+1];
 		arr[0] = 1;
@@ -23,8 +24,6 @@ public class CheckTree {
         }  
         return arr[n];
 	}
-	
-	
 	/**
 	 * 从一个有序的数组构建一个搜索二叉树
 	 * 递归的方式利用二分法获取排序后中间的数值
@@ -44,6 +43,53 @@ public class CheckTree {
 		return root;
 	}
 	
+	/***
+	  * 返回螺旋遍历树的集合
+	  * @param root
+	  * @return
+	  */
+	 public List<List<Integer>> LevelOrderUp(TreeNode root) {
+		 Stack<List<Integer>> stack = new Stack<List<Integer>>();
+		 List<List<Integer>> list = new ArrayList<List<Integer>>();
+		 UpHelper(stack, root, 0);
+		 while(!stack.isEmpty()) {
+			 list.add(stack.pop());
+		 }
+		 return list;
+	 }
+	 
+	 public static void UpHelper(Stack<List<Integer>> list, TreeNode root, int height) {
+		if(root == null) return;
+		if(height >= list.size()) list.add(new LinkedList<Integer>());
+		list.get(height).add(root.val);
+		UpHelper(list, root.left, height+1);
+		UpHelper(list, root.right, height+1);
+	 }
+	
+	/***
+	  * 返回螺旋遍历树的集合
+	  * @param root
+	  * @return
+	  */
+	 public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
+		 List<List<Integer>> reslist = new ArrayList<List<Integer>>();
+		 ZigzagHelper(reslist, root, 0);
+		 return reslist;
+	 }
+	 
+	 public static void ZigzagHelper(List<List<Integer>> list, TreeNode root, int height) {
+		if(root == null) return;
+		if(height >= list.size()) list.add(new LinkedList<Integer>());
+		list.get(height).add(root.val);
+		if(height % 2 == 1) {
+			ZigzagHelper(list, root.left, height+1);
+			ZigzagHelper(list, root.right, height+1);
+		} else {
+			ZigzagHelper(list, root.right, height+1);
+			ZigzagHelper(list, root.left, height+1);
+		}
+	 }
+	
 	 /***
 	  * 返回同深度的集合
 	  * @param root
@@ -51,16 +97,16 @@ public class CheckTree {
 	  */
 	 public List<List<Integer>> levelOrderBottom(TreeNode root) {
 		 List<List<Integer>> reslist = new ArrayList<List<Integer>>();
-		 List<Integer> list = new ArrayList<>();
-		 if(root != null) levelOrder(list, root);
-		 reslist.add(list);
+		 LevelHelper(reslist, root, 0);
 		 return reslist;
 	 }
 	 
-	 public static void levelOrder(List<Integer> list, TreeNode root) {
-		if (root != null) list.add(root.val);
-		levelOrder(list, root.left);
-		levelOrder(list, root.right);
+	 public static void LevelHelper(List<List<Integer>> list, TreeNode root, int height) {
+		if(root == null) return;
+		if(height >= list.size()) list.add(new LinkedList<Integer>());
+		list.get(height).add(root.val);
+		LevelHelper(list, root.left, height+1);
+		LevelHelper(list, root.right, height+1);
 	}
 	 
 	/***
