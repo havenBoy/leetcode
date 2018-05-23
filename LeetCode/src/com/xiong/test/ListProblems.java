@@ -191,7 +191,8 @@ public class ListProblems {
 			first = first.next;
 			k--;
 		}
-		while(first.next != null){
+		if(first == null) return head.next;
+		while(first != null && first.next != null){
 			last = last.next;
 			first = first.next;
 		}
