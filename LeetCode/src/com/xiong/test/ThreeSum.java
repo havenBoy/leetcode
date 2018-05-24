@@ -32,11 +32,12 @@ public class ThreeSum {
 	}
 	
 	public static List<List<Integer>> threeSum(int[] nums, int target) {
+		if(nums.length < 3) return new ArrayList<List<Integer>>();
 		Arrays.sort(nums);
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
 		for (int i = 0; i < nums.length; i++) {
 			List<Integer> resList = twoSum(nums,target-nums[i],i);
-			list.add(resList);
+			if(resList.size() != 0 && !list.contains(resList)) list.add(resList);
 		}
 		return list;
 	}
@@ -49,7 +50,9 @@ public class ThreeSum {
 		}
 		for (int i = 0; i < nums.length && i != index; i++) {
 			if (map.containsKey(target-nums[i])) {
-				if (map.get((target-nums[i])) != index) {
+				if (map.get((target-nums[i])) != index &&
+						map.get(nums[index]) != map.get(target-nums[i]) && 
+						map.get(nums[i]) != map.get(target-nums[i])) {
 					list.add(nums[index]);
 					list.add(nums[i]);
 					list.add(target-nums[i]);
@@ -78,14 +81,11 @@ public class ThreeSum {
 		}
 	}
 	public static void main(String[] args) {
-		int[] array = {-4,-1,0,1,2};
-		
-		List<List<Integer>> list = threeSum(array, 0);
-		show(list);
-		System.out.println(list.size());
-		
-//		List<List<Integer>> listNew = threeSum(array);
-//		show(listNew);
+		int[] array = {1,1,0,2,-2,-1};
+//		List<List<Integer>> list = threeSum(array, 0);
+//		show(list);
+		List<List<Integer>> listNew = threeSum(array,0);
+		show(listNew);
 	}
 
 }
