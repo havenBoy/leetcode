@@ -15,34 +15,26 @@ public class LastWordLength {
 		return s.trim().length()- 1 - s.trim().lastIndexOf(" ");
 	}
 	
-/*	public static int lengthOfLastWord(String s) {
-		int count = 0;
-		if (s.charAt(s.length()-1) == ' ') {
-			int index = s.length()-1;
-			while(index >= 0) {
-				if (s.charAt(index) != ' ') {
-					for (int i = index; i >= 0; i--) {
-						if (s.charAt(i) == ' ' || i == -1) {
-							return index - i;
-						}
-					}
-				}
-				index--;
-			}
-		} else {
-			for (int i = s.length()-1; i >= 0; i--) {
-				if (s.charAt(i) == ' ') {
-					break;
-				}
-				count++;
-			}
+	/**
+	 * 找出字符串的最大公共字符串
+	 * @param strs
+	 * @return
+	 */
+	public static String longestCommonPrefix(String[] strs) {
+		if(strs.length == 0) return "";
+		String res = strs[0];
+ 		for (int i = 1; i < strs.length; i++) {
+			while (strs[i].indexOf(res) != 0) 
+				res = res.substring(0, res.length()-1); 
 		}
-		return count;
-	}*/
+ 		return res;
+	}
 	
 	public static void main(String[] args) {
 		int[] nums = {1,2,3,4};
 		Arrays.toString(nums);
+		String[] str = {"flower","flow","flight"};
+		System.out.println(longestCommonPrefix(str));
 		String string = "  ss";
 		System.out.println(lengthOfLastWord(string));
 	}
