@@ -4,6 +4,10 @@ import java.util.Arrays;
 
 public class MajorityElement {
 	
+	public static int divide(int dividend, int divisor) {
+		return dividend/divisor;
+	}
+	
 	/**
 	 * Roman转阿拉伯数字    I, V, X, L, C, D and M.
 	 * @param s
@@ -59,6 +63,8 @@ public class MajorityElement {
 	}
 	
     public static void main(String[] args) {
+    	
+    	System.out.println(divide(7, -3));
 		String string = "MCMXCIV";
 		System.out.println(romanToInt(string));
 	}
