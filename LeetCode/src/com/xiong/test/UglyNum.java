@@ -42,24 +42,24 @@ public class UglyNum {
 	}
 	
 	public static int nthUglyNumber2(int n) {
-		if (n == 1) return 1;
 		int[] nums = new int[n];
 		int num1 = 2, num2 = 3, num3 = 5;
-		int index1 = 0, index2 = 0,index3 = 0;
-		for (int i = 0; i < n; i++) {
-			nums[0] = 1;
-			nums[i] = Math.min(num1, Math.min(num2, num3));
-			if(Math.min(num1, Math.min(num2, num3)) == num1) num1 = 2 * nums[++index1];
-			if(Math.min(num1, Math.min(num2, num3)) == num2) num1 = 3 * nums[++index2];
-			if(Math.min(num1, Math.min(num2, num3)) == num3) num1 = 5 * nums[++index3];
+		int index1 = 0, index2 = 0, index3 = 0;
+		nums[0] = 1;
+		for (int i = 1; i < n; i++) {
+			int min = Math.min(num1, Math.min(num2, num3));
+			nums[i] = min;
+			if(min == num1) num1 = 2 * nums[index1++];
+			if(min == num2) num2 = 3 * nums[index2++];
+			if(min == num3) num3 = 5 * nums[index3++];
 		}
 		return nums[n-1];		
 	}
 	
 	public static void main(String[] args) {
 		 System.out.println(isUgly(11));
-		 System.out.println(nthUglyNumber(10));
-		 System.out.println(nthUglyNumber2(10));
+		 System.out.println(nthUglyNumber(100));
+		 System.out.println(nthUglyNumber2(1000));
 	}
 
 }
