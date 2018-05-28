@@ -49,9 +49,9 @@ public class UglyNum {
 		for (int i = 1; i < n; i++) {
 			int min = Math.min(num1, Math.min(num2, num3));
 			nums[i] = min;
-			if(min == num1) num1 = 2 * nums[index1++];
-			if(min == num2) num2 = 3 * nums[index2++];
-			if(min == num3) num3 = 5 * nums[index3++];
+			if(min == num1) num1 = 2 * nums[++index1];
+			if(min == num2) num2 = 3 * nums[++index2];
+			if(min == num3) num3 = 5 * nums[++index3];
 		}
 		return nums[n-1];		
 	}
@@ -59,7 +59,7 @@ public class UglyNum {
 	public static void main(String[] args) {
 		 System.out.println(isUgly(11));
 		 System.out.println(nthUglyNumber(100));
-		 System.out.println(nthUglyNumber2(1000));
+		 System.out.println(nthUglyNumber2(10));
 	}
 
 }
