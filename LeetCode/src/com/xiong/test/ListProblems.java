@@ -1,11 +1,40 @@
 package com.xiong.test;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 /**
  * @author 作者:XiaoXiong
  * @version 创建时间：2018年4月15日 上午11:13:48
  * 类说明
  */
 public class ListProblems {
+	
+	/**
+	 * 对K个链表排序
+	 * @param lists
+	 * @return
+	 */
+	public static ListNode mergeKLists(ListNode[] lists) {
+		List<Integer> list = new ArrayList<>();
+		for (ListNode listNode : lists) {
+			while (listNode != null) {
+				list.add(listNode.val);
+				listNode = listNode.next;
+			}
+		}
+		if(list.size() == 0) return null;
+		Collections.sort(list);
+		ListNode res = null;
+		ListNode head = new ListNode(list.get(0));
+		res = head;
+		for (int i = 1; i < list.size(); i++) {
+			head.next = new ListNode(list.get(i));
+			head = head.next;
+		}
+		return res;
+	}
 	
 	/**
 	 * Input: (2 -> 4 -> 3) + (5 -> 6 -> 4)
@@ -209,8 +238,23 @@ public class ListProblems {
 		node2.next = node3;
 		node3.next = node4;
 		node4.next = null;
+		
+		ListNode node11 = new ListNode(1);
+		ListNode node21 = new ListNode(5);
+		ListNode node31 = new ListNode(3);
+		ListNode node41 = new ListNode(4);
+		node11.next = node21;
+		node21.next = node31;
+		node31.next = node41;
+		node41.next = null;
+		ListNode[] array = new ListNode[2];
+		array[0] = node1;
+		array[1] = node11;
+		ListNode node = mergeKLists(array);
+		ListNode.show(node);
+		
 		//ListNode.show(delete1(node1, 1));
-		ListNode.show(getK(node1, 4));
+		//ListNode.show(getK(node1, 4));
 		//ListNode.show(deleteDuplicates(node1));
 	}
 
