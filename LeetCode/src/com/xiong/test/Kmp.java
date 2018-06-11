@@ -31,11 +31,11 @@ public class Kmp {
 	 * @param next
 	 * @return
 	 */
-	public static int Kmp(String string, String substring, int[] next) {
-		int str = string.length();
-		int sub = substring.length();
-		int i = 0, j = 0;
-	}
+//	public static int Kmp(String string, String substring, int[] next) {
+//		int str = string.length();
+//		int sub = substring.length();
+//		int i = 0, j = 0;
+//	}
 	
 	public static void main(String[] args) {
 		String string = "BBC ABCDAB ABCDABCDABDE", substring="ABCDABD";
