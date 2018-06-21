@@ -1,10 +1,35 @@
 package com.xiong.test;
+
 /***
  * 写出所有的排序算法
  * @author Eric
  *
  */
 public class Sort {
+	
+	/**
+	 * 对3个重复元素的排序
+	 * @param nums
+	 */
+	public static void sortColor(int[] nums) {
+		if(nums.length <= 1) return ;
+		int[] res = {0,0,0};
+		for (int i = 0; i < nums.length; i++) {
+			res[nums[i]] ++;
+		}
+		int index = 0;
+		for (int i = 0; i < res[0]; i++) {
+			nums[index++] = 0;
+		}
+		for (int i = 0; i < res[1]; i++) {
+			nums[index++] = 1;
+		}
+		for (int i = 0; i < res[2]; i++) {
+			nums[index++] = 2;
+		}
+	}
+	
+	
 	/***
 	 * 冒泡排序
 	 * 时间复杂度为n2 空间复杂度为n 
@@ -48,8 +73,10 @@ public class Sort {
 	
 	
 	public static void main(String[] args) {
-		int[] nums = {73, 22, 93, 43, 55, 14, 28, 65, 39, 81};
+		int[] nums = {2,0,2,1,1,0};
+		//int[] nums = {73, 22, 93, 43, 55, 14, 28, 65, 39, 81};
 		//Utils.show(bubbleSort(nums));
-		Utils.show(insertSort(nums));
+		sortColor(nums);
+		Utils.show(nums);
 	}
 }
