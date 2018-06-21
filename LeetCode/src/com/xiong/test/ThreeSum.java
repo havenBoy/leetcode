@@ -7,8 +7,39 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 
+/**
+ * 动态规划思想
+ * @author Xiong
+ *
+ */
 public class ThreeSum {
 	
+	/**
+	 * 返回所有组合为目标值的集合（给定数组无重复元素，且要求返回集合无重复）
+	 * @param candidates
+	 * @param target
+	 * @return
+	 */
+//	public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+//
+//	}
+ 
+	/**
+	 * 返回所有组合为目标值的集合（给定数组有重复元素，且要求返回集合中无重复元素）
+	 * @param candidates
+	 * @param target
+	 * @return
+	 */
+//    public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
+//        
+//    }
+	
+	
+	/**
+	 * 给定数组和一个目标值，找出3个数字之和等于目标值
+	 * @param array
+	 * @return
+	 */
 	public static List<List<Integer>> threeSum(int[] array) {
 		Set<List<Integer>> set = new HashSet<List<Integer>>();
 		List<List<Integer>> listNew = new ArrayList<List<Integer>>();
@@ -42,6 +73,11 @@ public class ThreeSum {
 		return list;
 	}
 	
+	/**
+	 * 给定数组和一个目标值，找出2个数字之和等于目标值
+	 * @param array
+	 * @return
+	 */
 	public static List<Integer> twoSum(int[] nums,int target, int index) {
 		List<Integer> list = new ArrayList<Integer>();
 		HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
