@@ -4,8 +4,30 @@ import java.util.HashMap;
 
 public class TwoSum {
 	
+	public static int[] twosum(int[] nums, int target) {
+		int[] array = new int[2];
+		int low = 0, high = nums.length-1;
+		while(low < high) {
+			if(nums[low] + nums[high] == target) {
+				array[0] = low + 1;
+				array[1] = high + 1;
+				return array;
+			} else if (nums[low] + nums[high] < target) {
+				low += 1;
+			} else {
+				high -= 1;
+			}
+		}
+		return array;
+	}
 	
 	
+	/**
+	 * 原数组是无序的
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public static int[] twoSums(int[] nums,int target) {
 		int[] array = new int[2];
 		HashMap<Integer, Integer> map = new HashMap<Integer,Integer>();
@@ -59,10 +81,11 @@ public class TwoSum {
 	}
 	public static void main(String[] args) {
 		int[] nums = {2, 7, 11, 15};
-		int target = 18;
+		int target = 9;
 		int[] array = twoSum(nums, target);
 		//int[] array = twoSum1(nums, target);
-		System.out.println(array[0] + ";" + array[1]);
+		System.out.println(twosum(nums, target)[0]);
+		System.out.println(twosum(nums, target)[1]);
 	}
 
 }
