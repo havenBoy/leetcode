@@ -4,6 +4,12 @@ import java.util.HashMap;
 
 public class TwoSum {
 	
+	/**
+	 * 指针碰撞法（二分）
+	 * @param nums
+	 * @param target
+	 * @return
+	 */
 	public static int[] twosum(int[] nums, int target) {
 		int[] array = new int[2];
 		int low = 0, high = nums.length-1;
@@ -82,7 +88,7 @@ public class TwoSum {
 	public static void main(String[] args) {
 		int[] nums = {2, 7, 11, 15};
 		int target = 9;
-		int[] array = twoSum(nums, target);
+		//int[] array = twoSum(nums, target);
 		//int[] array = twoSum1(nums, target);
 		System.out.println(twosum(nums, target)[0]);
 		System.out.println(twosum(nums, target)[1]);
