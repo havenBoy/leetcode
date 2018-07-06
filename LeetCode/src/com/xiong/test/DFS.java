@@ -9,12 +9,25 @@ public class DFS {
 	
 	//DFS经典解决问题办法
 	
-	/**
-	 * 全排列问题
+	/**  46. Permutations 
+	 * 全排列问题(无重复数字)
 	 * @param nums
 	 * @return
 	 */
     public static List<List<Integer>> permute(int[] nums) {
+    	List<List<Integer>> res = new ArrayList<List<Integer>>();
+    	if(nums.length == 0) return null;
+        dfs(res, nums, 0, nums.length);
+        return res;
+    }
+    
+    
+    /** 47. Permutations 2
+	 * 全排列问题(有重复数字)
+	 * @param nums
+	 * @return
+	 */
+	public static List<List<Integer>> permutes(int[] nums) {
     	List<List<Integer>> res = new ArrayList<List<Integer>>();
     	if(nums.length == 0) return null;
         dfs(res, nums, 0, nums.length);
@@ -45,11 +58,10 @@ public class DFS {
 		num[j] = temp;
 	}
 	
-	
 	//测试
 	@Test
 	public void test() {
-		int[] nums = {1};
+		int[] nums = {1,2,3};
 		System.out.println(permute(nums).size());
 	}
 
