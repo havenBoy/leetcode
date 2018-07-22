@@ -14,6 +14,42 @@ import java.util.Set;
  */
 public class ThreeSum {
 	
+	private static String[] stringMap = {
+		" ",
+		"",
+		"abc",
+		"def",
+		"ghi",
+		"jkl",
+		"mno",
+		"pqrs",
+		"tuv",
+		"wxyz",
+	};
+	
+	
+	public static void subletter(List<String> list, String digits, int index, String s) {
+		if(digits.length() == 0) return ;
+		if(digits.length() == index) {
+			list.add(s);
+			return ;
+		}
+		char c = digits.charAt(index);
+		if( c > '0' && c < '9' && c != '1') {
+			String letters = stringMap[c - '0'];
+			for (int i = 0; i < letters.length(); i++) {
+				subletter(list, digits, index+1, s + letters.charAt(i));
+			}
+		}
+	}
+	
+	
+	public static List<String> letterCombinations(String digits) {
+		List<String> res = new ArrayList<String>();
+		subletter(res, digits, 0, "");
+		return res;
+	}
+	
 	/**
 	 * 返回所有组合为目标值的集合（给定数组无重复元素，且要求返回集合无重复）
 	 * @param candidates
@@ -99,6 +135,12 @@ public class ThreeSum {
 		return list;
 	}
 	
+	public static void showList(List<String> list) {
+		for (String string : list) {
+			System.out.println(string);
+		}
+	}
+	
 	public static void shows (Set<List<Integer>> set) {
 		for (List<Integer> list : set) {
 			for (int i = 0; i < list.size(); i++) {
@@ -115,13 +157,6 @@ public class ThreeSum {
 			}
 			System.out.println("");
 		}
-	}
-	public static void main(String[] args) {
-		int[] array = {1,1,0,2,-2,-1};
-//		List<List<Integer>> list = threeSum(array, 0);
-//		show(list);
-		List<List<Integer>> listNew = threeSum(array,0);
-		show(listNew);
 	}
 
 }
