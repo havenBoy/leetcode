@@ -11,6 +11,7 @@ import java.util.Set;
  */
 public class ContainsDuplicate {
 	
+	
 	/***
 	 * 数组中查找是否存在相同的数字
 	 * 存在相同的返回true  否则返回false
