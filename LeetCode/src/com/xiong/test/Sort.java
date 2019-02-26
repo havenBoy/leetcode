@@ -48,7 +48,7 @@ public class Sort {
 		return nums;
 	}
 	/***
-	 * 插入排序 
+	 * 插入排序 ： 每次使得左边的数组是有序的；
 	 * 时间复杂度   n^2   空间复杂度  n
 	 * 稳定性 ： 稳定
 	 * @param nums
@@ -134,7 +134,8 @@ public class Sort {
 		//Utils.show(bubbleSort(nums));
 		//sortColor(nums);
 		//selectSort(nums);
-		quickSort(nums, 0, nums.length-1);
+		//quickSort(nums, 0, nums.length-1);
+		insertSort(nums);
 		Utils.show(nums);
 	}
 }
