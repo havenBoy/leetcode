@@ -31,8 +31,9 @@ public class Sort {
 	
 	
 	/***
-	 * 冒泡排序
-	 * 时间复杂度为n2 空间复杂度为n 
+	 * 冒泡排序   每次重复比较2个数字，满足大小关系不交换，否则交换
+	 * 稳定性 ： 稳定
+	 * 时间复杂度为n2      空间复杂度为n 
 	 */
 	public static int[] bubbleSort(int[] nums) {
 		for (int i = 0; i < nums.length-1; i++) {
@@ -48,7 +49,8 @@ public class Sort {
 	}
 	/***
 	 * 插入排序 
-	 * 时间复杂度       空间复杂度
+	 * 时间复杂度   n^2   空间复杂度  n
+	 * 稳定性 ： 稳定
 	 * @param nums
 	 */
 	public static int[] insertSort(int[] nums) {
@@ -70,13 +72,69 @@ public class Sort {
 	public static int[] BinInsertSort(int[] nums) {
 		return nums;
 	}
+	/***
+	 * 快速排序    关于在于找出那个基准值
+	 * 时间复杂度 nlogN      空间复杂度  n
+	 * @param nums
+	 */
+	public static void quickSort(int[] nums, int low, int high) {
+		if(low < high) {
+			int mid = partion(nums, low, high);
+			quickSort(nums, 0, mid-1);
+			quickSort(nums, mid+1, high);
+		}
+	}
+	//找出基准
+	public static int partion(int[] arr, int low, int high) {
+		while(low < high) {
+			while(low < high && arr[low] <= arr[high]) {
+				low++;
+			}
+			if(low < high) {
+				int temp = arr[low];
+				arr[low] = arr[high];
+				arr[high] = temp;
+			}
+			while(low < high && arr[low] <= arr[high]) {
+				high--;
+			} 
+			if(low < high) {
+				int temp = arr[low];
+				arr[low] = arr[high];
+				arr[high] = temp;
+			}
+		}
+		return low;
+	}
+	/***
+	 * 选择排序: 每趟选出一个最小或者最大的数字在首位，
+	 *           然后再对剩下的数据重复
+	 * 时间复杂度    n^2   空间复杂度 n
+	 * 稳定性  : 不稳定
+	 * @param nums
+	 */
+	public static int[] selectSort(int[] nums) {
+		for(int i=0; i< nums.length-1;i++) {
+			int min = i;
+			for(int j=i+1; j<nums.length;j++) {
+				if(nums[min] > nums[j]) {
+					min = j;
+				}
+			}
+			int temp = nums[i];
+			nums[i] = nums[min];
+			nums[min] = temp;
+		}
+		return nums;
+	}
 	
 	
 	public static void main(String[] args) {
-		int[] nums = {2,0,2,1,1,0};
-		//int[] nums = {73, 22, 93, 43, 55, 14, 28, 65, 39, 81};
+		int[] nums = {73, 22, 93, 43, 55, 14, 28, 65, 39, 81};
 		//Utils.show(bubbleSort(nums));
-		sortColor(nums);
+		//sortColor(nums);
+		//selectSort(nums);
+		quickSort(nums, 0, nums.length-1);
 		Utils.show(nums);
 	}
 }

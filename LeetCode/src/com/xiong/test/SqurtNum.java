@@ -102,7 +102,7 @@ public class SqurtNum {
 	 * 算出一个数字的平方根（二分法查找的时间复杂度依然较高）
 	 */
 	public static int getSqrt(int num) {
-		int low=1,high=num;
+		int low = 1,high = num;
 		while(low <= high) {
 			int x = (low + high)/2;
 			if (x*x == num) {
