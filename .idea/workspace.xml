@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="d567fc03-5575-4d53-9ce6-1142ca68cc2f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/leetcode/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/leetcode.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/CheckTree.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/.classpath" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/LeetCode/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/.project" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/lib/junit-4.9.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/CheckTree.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/ContainsDuplicate.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/ContainsDuplicate.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/CountPrimes.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/CountPrimes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/CountingBits.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/CountingBits.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/DFS.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/DFS.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Fibonacci.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Fibonacci.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/FindIndex.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/FindIndex.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/InterSectionArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/InterSectionArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/IntergerBreak.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/IntergerBreak.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Kmp.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Kmp.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/LastWordLength.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/LastWordLength.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/ListNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/ListNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/ListProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/ListProblems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/MajorityElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/MajorityElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/MissingNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/MissingNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/MoveK.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/MoveK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/MoveZeroes.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/MoveZeroes.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Palindrome.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Palindrome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/PalindromeString.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/PalindromeString.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/PathSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/PathSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/PlusOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/PlusOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/PowFun.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/PowFun.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/RemoveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/RemoveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/RoberHouse.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/RoberHouse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/SearchRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/SearchRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/SearchRotatedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/SearchRotatedArray.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/SingleNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/SingleNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/SmallCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/SmallCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Sort.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Sort.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/SqurtNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/SqurtNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/StockProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/StockProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Test02.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Test02.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Test03.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Test03.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Test04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/UglyNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/UglyNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/LeetCode/src/com/xiong/test/validChacater.java" beforeDir="false" afterPath="$PROJECT_DIR$/leetcode/src/main/java/com/leetcode/validChacater.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="F:\repository" />
+        <option name="mavenHome" value="$PROJECT_DIR$/../../apache-maven-3.3.9" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="1l13wGd6Hgf397vLgF6wu4Oz20X" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/leetcode" />
+    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="d567fc03-5575-4d53-9ce6-1142ca68cc2f" name="Default Changelist" comment="" />
+      <created>1606751010084</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1606751010084</updated>
+      <workItem from="1606751014704" duration="272000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="786" y="276" key="FileChooserDialogImpl" timestamp="1606751281196">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="786" y="276" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606751281196" />
+    <state x="509" y="150" key="SettingsEditor" timestamp="1606751245519">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="509" y="150" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1606751245519" />
+  </component>
+</project>

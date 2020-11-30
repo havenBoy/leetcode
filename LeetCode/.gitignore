@@ -1,1 +1,4 @@
 /bin/
+.iml
+.gitignore
+/target
