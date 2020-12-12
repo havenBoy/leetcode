@@ -1,5 +1,6 @@
-package com.leetcode;
+package com.sangfor.security.test;
 
+import java.util.List;
 import java.util.Stack;
 
 /**
@@ -58,7 +59,7 @@ public class Test01 {
         if(null == node) {
             return ;
         }
-        Stack<ListNode> stack = new Stack<ListNode>();
+        Stack<ListNode> stack = new Stack<>();
         while (null != node) {
             stack.push(node);
             node = node.next;

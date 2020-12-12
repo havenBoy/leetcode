@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.sangfor.security.test;
 
 /**
  * 二分法查找以及延伸
