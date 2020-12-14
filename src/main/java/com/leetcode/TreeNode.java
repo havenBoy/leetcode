@@ -19,7 +19,7 @@ public class TreeNode {
      * @param node
      */
     public static void preNode1(TreeNode node) {
-		Stack<TreeNode> stack = new Stack<>();
+		Stack<TreeNode> stack = new Stack<TreeNode>();
     	if (node != null) {
 			stack.push(node);
 		}

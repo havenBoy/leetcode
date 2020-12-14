@@ -13,7 +13,7 @@ public class SmallCount {
 	 */
 	
 	public static List<Integer> smallCount(int[] nums) {
-		List<Integer> list = new ArrayList<>();
+		List<Integer> list = new ArrayList<Integer>();
 		if (nums.length == 0) return list;
 		for (int i = 0; i < nums.length-1; i++) {
 			int count = 0;

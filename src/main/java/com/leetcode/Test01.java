@@ -1,4 +1,4 @@
-package com.sangfor.security.test;
+package com.leetcode;
 
 import java.util.List;
 import java.util.Stack;
@@ -11,6 +11,9 @@ import java.util.Stack;
  */
 public class Test01 {
 
+    /**
+     * 链表结构定义
+     */
     private static class ListNode {
         int value;
         ListNode next;
@@ -31,6 +34,9 @@ public class Test01 {
 
     }
 
+    /**
+     * 查找倒数第K个数字
+     */
     public static int findBackKNum(ListNode node, int k) {
         if(null == node || k == 0) {
             return -1;
@@ -59,7 +65,7 @@ public class Test01 {
         if(null == node) {
             return ;
         }
-        Stack<ListNode> stack = new Stack<>();
+        Stack<ListNode> stack = new Stack<ListNode>();
         while (null != node) {
             stack.push(node);
             node = node.next;

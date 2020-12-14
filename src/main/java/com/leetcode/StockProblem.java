@@ -10,7 +10,7 @@ public class StockProblem {
 	 * 计算出股票的最高收益点  时间复杂度是n2
 	 * **/
 	public static int getSell(int[] nums) {
-		List<Integer> list = new ArrayList<>();
+		List<Integer> list = new ArrayList<Integer>();
 		for (int i = 0; i < nums.length-1; i++) {
 			for (int j = i+1; j < nums.length; j++) {
 				if (nums[j] - nums[i] > 0) {

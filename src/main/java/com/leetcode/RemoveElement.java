@@ -56,7 +56,7 @@ public class RemoveElement {
 	 * @param head
 	 * @return
 	 */
-	public static com.xiong.test.ListNode removeDup(com.xiong.test.ListNode head) {
+	public static ListNode removeDup(ListNode head) {
 		if(head == null || head.next == null) { return head;}
 		head.next = removeDup(head.next);
 		return head.val == head.next.val ? head.next : head;

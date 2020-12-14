@@ -11,7 +11,7 @@ public class PathSum {
 	 * @param target
 	 * @return
 	 */
-	public static boolean hasPathSum(com.xiong.test.TreeNode node, int target) {
+	public static boolean hasPathSum(TreeNode node, int target) {
 		if (node == null) return false;
 		if (node.left == null && node.right == null && node.val == target) return true;
 		return hasPathSum(node.left, target-node.val) || hasPathSum(node.right, target-node.val);
@@ -23,7 +23,7 @@ public class PathSum {
 	 * @param sum
 	 * @return
 	 */
-	public static List<List<Integer>> pathSum(com.xiong.test.TreeNode root, int sum) {
+	public static List<List<Integer>> pathSum(TreeNode root, int sum) {
 		List<List<Integer>> list = new ArrayList<List<Integer>>();
 		List<Integer> listSub = new ArrayList<Integer>();
 		pathSumSub(list, listSub, root, sum);
@@ -36,11 +36,11 @@ public class PathSum {
 	 * @param root
 	 * @param sum
 	 */
-	public static void pathSumSub(List<List<Integer>> list, List<Integer> listSub, com.xiong.test.TreeNode root, int sum) {
+	public static void pathSumSub(List<List<Integer>> list, List<Integer> listSub, TreeNode root, int sum) {
 		if(root == null) return;
 		listSub.add(root.val);
 		if(root.left == null && root.right == null && root.val == sum) {
-			list.add(new ArrayList<>(listSub));
+			list.add(new ArrayList<Integer>(listSub));
 			listSub.remove(listSub.size()-1);
 			return;
 		} else {

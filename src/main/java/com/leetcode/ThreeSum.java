@@ -77,7 +77,7 @@ public class ThreeSum {
 		for (int i = 0; i < array.length-2; i++) {
 			for (int j = i+1; j < array.length-1; j++) {
 				for (int k = j+1; k < array.length; k++) {
-					List<Integer> list = new ArrayList<>();
+					List<Integer> list = new ArrayList<Integer>();
 					if (array[k] + array[j] + array[i] == 0) {
 						list.add(array[i]);
 						list.add(array[j]);

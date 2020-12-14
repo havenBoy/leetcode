@@ -1,4 +1,4 @@
-package com.sangfor.security.test;
+package com.leetcode;
 
 import java.util.Set;
 import javax.swing.tree.TreeNode;
@@ -23,7 +23,7 @@ public class Test04 {
      * @author 赵小雄59782
      * @date 2020/11/30 20:23
      * @param treeNode 入参
-     * @return 
+     * @return
      */
     public void mirror(BinaryTree treeNode) {
         if (null != treeNode) {
@@ -41,8 +41,8 @@ public class Test04 {
      *
      * @author 赵小雄59782
      * @date 2020/11/30 20:25
-     * @param node 
-     * @return 
+     * @param node
+     * @return
      */
     public static int maxDepth(BinaryTree node) {
         if (null == node) {
@@ -59,7 +59,7 @@ public class Test04 {
      * @author 赵小雄59782
      * @date 2020/11/30 20:25
      * @param node
-     * @return 
+     * @return
      */
     public static int minDepth(BinaryTree node) {
         if (null == node) {
@@ -85,7 +85,7 @@ public class Test04 {
      * @date 2020/11/30 20:26
      * @param node1 入参1
      * @param node2 入参2
-     * @return 
+     * @return
      */
     public boolean checkTree(BinaryTree node1, BinaryTree node2) {
         if (null == node1 && null == node2) {
@@ -106,7 +106,7 @@ public class Test04 {
      * @author 赵小雄59782
      * @date 2020/11/30 20:26
      * @param node
-     * @return 
+     * @return
      */
     public static boolean checkCompleteTree(BinaryTree node) {
         if (null == node) {
@@ -127,7 +127,7 @@ public class Test04 {
      * @author 赵小雄59782
      * @date 2020/12/1 14:59
      * @param node
-     * @return 
+     * @return
      */
     public static boolean checkPerfectTree(BinaryTree node) {
         if (null == node) {
@@ -163,4 +163,6 @@ public class Test04 {
         node1.right = node4;
         node2.left = node5;
         node2.right = node6;
+    }
+}
   

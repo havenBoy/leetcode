@@ -22,7 +22,7 @@ public class SingleNum {
 	}
 	//三三出现，找出单独的数字（虽然实现，但是时间复杂度较高，待改善）
 	public static int getSingleThree(int[] nums) {
-		HashMap<Integer, Integer> map = new HashMap<>();
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		for (int i = 0; i < nums.length; i++) {
 			map.put(nums[i], map.get(nums[i]) == null ? 1 : map.get(nums[i])+1);
 		}
@@ -33,7 +33,7 @@ public class SingleNum {
 	}
 	//2个单独出现的数字（虽然实现，但是时间复杂度较高，待改善）
 	public static int[] getSingleNumTwo(int[] nums) {
-		HashMap<Integer, Integer> map = new HashMap<>();
+		HashMap<Integer, Integer> map = new HashMap<Integer, Integer>();
 		int[] res = new int[2];
 		int index = 0;
 		for (int i = 0; i < nums.length; i++) {

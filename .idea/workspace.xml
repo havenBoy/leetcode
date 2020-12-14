@@ -22,20 +22,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4319a7a-4a98-4cee-b0f1-9a33ae953bc0" name="Default Changelist" comment="" />
+    <list default="true" id="d4319a7a-4a98-4cee-b0f1-9a33ae953bc0" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/ListProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/ListProblems.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/MissingNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/MissingNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/PathSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/PathSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/RemoveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/RemoveElement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRange.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SingleNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SingleNum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SmallCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SmallCount.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/StockProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/StockProblem.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/Test01.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test02.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/Test04.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/ThreeSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/TreeNode.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/TwoSum.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
         <option name="localRepository" value="D:\repository" />
-        <option name="mavenHome" value="F:\apache-maven-3.3.9" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -47,10 +71,12 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
@@ -62,7 +88,20 @@
       <recent name="F:\others\leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test01">
+  <component name="RunManager" selected="Application.Test01 (1)">
+    <configuration name="Test01 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.sangfor.security.test.Test01" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.sangfor.security.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test01" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Test01" />
       <module name="leetcode" />
@@ -79,6 +118,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Test01 (1)" />
         <item itemvalue="Application.Test01" />
         <item itemvalue="Application.Test02" />
       </list>
@@ -112,23 +152,5 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="440" y="101" key="#Project_Structure" timestamp="1606748675685">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="440" y="101" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1606748675685" />
-    <state x="744" y="402" width="431" height="251" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1606749251505">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="744" y="402" width="431" height="251" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1050@0.0.1920.1050" timestamp="1606749251505" />
-    <state x="199" y="360" key="FileChooserDialogImpl" timestamp="1606748617587">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="199" y="360" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1606748617587" />
-    <state x="498" y="174" key="SettingsEditor" timestamp="1606752012925">
-      <screen x="0" y="0" width="1920" height="1050" />
-    </state>
-    <state x="498" y="174" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1606752012925" />
   </component>
 </project>

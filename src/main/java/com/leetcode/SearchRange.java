@@ -43,7 +43,7 @@ public class SearchRange {
 	 * @return
 	 */
 	public static int[] searchRange2(int[] nums, int target) {
-		List<Integer> list = new ArrayList<>();
+		List<Integer> list = new ArrayList<Integer>();
 		int[] array = new int[2];
 		array[0] = -1;
 		array[1] = -1;
@@ -62,8 +62,8 @@ public class SearchRange {
 	
 	public static void main(String[] args) {
 		int[] nums = {5,7,8,8,8,10};
-		com.xiong.test.Utils.show(searchRange2(nums, 6));
-		com.xiong.test.Utils.show(searchRange(nums, 8));
+		Utils.show(searchRange2(nums, 6));
+		Utils.show(searchRange(nums, 8));
 	}
 
 }

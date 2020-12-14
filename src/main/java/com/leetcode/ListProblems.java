@@ -16,9 +16,9 @@ public class ListProblems {
 	 * @param lists
 	 * @return
 	 */
-	public static com.xiong.test.ListNode mergeKLists(com.xiong.test.ListNode[] lists) {
-		List<Integer> list = new ArrayList<>();
-		for (com.xiong.test.ListNode listNode : lists) {
+	public static ListNode mergeKLists(ListNode[] lists) {
+		List<Integer> list = new ArrayList<Integer>();
+		for (ListNode listNode : lists) {
 			while (listNode != null) {
 				list.add(listNode.val);
 				listNode = listNode.next;
@@ -26,11 +26,11 @@ public class ListProblems {
 		}
 		if(list.size() == 0) return null;
 		Collections.sort(list);
-		com.xiong.test.ListNode res = null;
-		com.xiong.test.ListNode head = new com.xiong.test.ListNode(list.get(0));
+		ListNode res = null;
+		ListNode head = new ListNode(list.get(0));
 		res = head;
 		for (int i = 1; i < list.size(); i++) {
-			head.next = new com.xiong.test.ListNode(list.get(i));
+			head.next = new ListNode(list.get(i));
 			head = head.next;
 		}
 		return res;
@@ -44,16 +44,16 @@ public class ListProblems {
 	 * @param l2
 	 * @return
 	 */
-    public static com.xiong.test.ListNode addTwoNumbers(com.xiong.test.ListNode l1, com.xiong.test.ListNode l2) {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
         return combine(l1,l2,0);
     }
     
-    public static com.xiong.test.ListNode combine(com.xiong.test.ListNode l1, com.xiong.test.ListNode l2, int flag) {
+    public static ListNode combine(ListNode l1, ListNode l2, int flag) {
 		if(l1 == null && l2 == null && flag == 0) return null;
 		int sum = (l1 == null ? 0 : l1.val) + (l2 == null ? 0 : l2.val) + flag;
 		flag = sum >= 10 ? 1 : 0;
 		int value = sum >= 10 ? sum-10 : sum;
-		com.xiong.test.ListNode node = new com.xiong.test.ListNode(value);
+		ListNode node = new ListNode(value);
 		node.next = combine(l1 == null ? null : l1.next, l2==null ? null : l2.next, flag);
 		return node;
 	}
@@ -63,9 +63,9 @@ public class ListProblems {
 	 * @param head
 	 * @return
 	 */
-	public static com.xiong.test.ListNode deleteDuplicates(com.xiong.test.ListNode head) {
+	public static ListNode deleteDuplicates(ListNode head) {
 		if (head == null || head.next == null)  return head;
-        com.xiong.test.ListNode tail = head;
+        ListNode tail = head;
 		while (tail.next != null) {
 			if (tail.val == tail.next.val) {
 				tail.next = tail.next.next;
@@ -81,9 +81,9 @@ public class ListProblems {
 	 * @param node
 	 * @return
 	 */
-	public static com.xiong.test.ListNode delete1(com.xiong.test.ListNode node, int val) {
+	public static ListNode delete1(ListNode node, int val) {
 		if (node == null || node.next == null) return node;
-		com.xiong.test.ListNode tail = node;
+		ListNode tail = node;
 		while (tail.next != null) {
 			if (tail.val == val) {
 				tail.next = tail.next.next;
@@ -99,11 +99,11 @@ public class ListProblems {
 	 * @param head
 	 * @return
 	 */
-	public static com.xiong.test.ListNode reverse(com.xiong.test.ListNode head) {
+	public static ListNode reverse(ListNode head) {
 		if(head == null || head.next == null) return head;
-		com.xiong.test.ListNode p = head,newHead = null;
+		ListNode p = head,newHead = null;
 		while (p != null) {
-			com.xiong.test.ListNode temp = p.next;
+			ListNode temp = p.next;
 			p.next = newHead;
 			newHead = p;
 			p = temp;
@@ -117,9 +117,9 @@ public class ListProblems {
 	 * @param head
 	 * @return
 	 */
-	public static boolean hasCycle(com.xiong.test.ListNode head) {
+	public static boolean hasCycle(ListNode head) {
 		if(head == null) return false;
-		com.xiong.test.ListNode slow = head, fast = head;
+		ListNode slow = head, fast = head;
 		while (fast.next != null && fast.next.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
@@ -135,9 +135,9 @@ public class ListProblems {
 	 * @param head
 	 * @return
 	 */
-	public static com.xiong.test.ListNode markNode(com.xiong.test.ListNode head) {
+	public static ListNode markNode(ListNode head) {
 		if(head == null) return null;
-		com.xiong.test.ListNode slow = head, fast = head;
+		ListNode slow = head, fast = head;
 		while (fast != null && fast.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
@@ -159,9 +159,9 @@ public class ListProblems {
 	 * @param head
 	 * @return
 	 */
-	public static int cycleLength(com.xiong.test.ListNode head) {
+	public static int cycleLength(ListNode head) {
 		if(head == null) return 0;
-		com.xiong.test.ListNode slow = head, fast = head;
+		ListNode slow = head, fast = head;
 		int count = 0;
 		while(fast.next != null && fast.next.next == null) {
 			slow = slow.next;
@@ -184,10 +184,10 @@ public class ListProblems {
 	 * @param k
 	 * @return
 	 */
-	public static com.xiong.test.ListNode rotate(com.xiong.test.ListNode head, int k) {
+	public static ListNode rotate(ListNode head, int k) {
 		if(head == null || k == 0) return head;
 		int count = 1;
-		com.xiong.test.ListNode p = head;
+		ListNode p = head;
 		while (p.next != null) {//遍历计算出列表的长度
 			++count;
 			p = p.next;
@@ -197,7 +197,7 @@ public class ListProblems {
 		for (int i = 0; i < count; i++) {
 			p = p.next;
 		}
-		com.xiong.test.ListNode newHead = p.next;
+		ListNode newHead = p.next;
 		p.next = null;
 		return newHead;
 	}
@@ -206,16 +206,17 @@ public class ListProblems {
 	/***
 	 * 遍历一遍得到链表的倒数第K个节点
 	 * 删除列表的倒数第K个节点
-	 * @param node
+	 * @param head 表示头结点
+ 	 * @param k  表示倒数第K
 	 * @return
 	 */
 	
-	public static com.xiong.test.ListNode getK(com.xiong.test.ListNode head, int k) {
+	public static ListNode getK(ListNode head, int k) {
 		if(head == null || k <= 0)return head; 
-		com.xiong.test.ListNode headNode = new com.xiong.test.ListNode(0);
+		ListNode headNode = new ListNode(0);
 		headNode.next = head;
-		com.xiong.test.ListNode first = head;
-		com.xiong.test.ListNode last = head;
+		ListNode first = head;
+		ListNode last = head;
 		while(k > 0){
 			first = first.next;
 			k--;
@@ -230,28 +231,28 @@ public class ListProblems {
 	}
 	
 	public static void main(String[] args) {
-		com.xiong.test.ListNode node1 = new com.xiong.test.ListNode(1);
-		com.xiong.test.ListNode node2 = new com.xiong.test.ListNode(5);
-		com.xiong.test.ListNode node3 = new com.xiong.test.ListNode(3);
-		com.xiong.test.ListNode node4 = new com.xiong.test.ListNode(4);
+		ListNode node1 = new ListNode(1);
+		ListNode node2 = new ListNode(5);
+		ListNode node3 = new ListNode(3);
+		ListNode node4 = new ListNode(4);
 		node1.next = node2;
 		node2.next = node3;
 		node3.next = node4;
 		node4.next = null;
 		
-		com.xiong.test.ListNode node11 = new com.xiong.test.ListNode(1);
-		com.xiong.test.ListNode node21 = new com.xiong.test.ListNode(5);
-		com.xiong.test.ListNode node31 = new com.xiong.test.ListNode(3);
-		com.xiong.test.ListNode node41 = new com.xiong.test.ListNode(4);
+		ListNode node11 = new ListNode(1);
+		ListNode node21 = new ListNode(5);
+		ListNode node31 = new ListNode(3);
+		ListNode node41 = new ListNode(4);
 		node11.next = node21;
 		node21.next = node31;
 		node31.next = node41;
 		node41.next = null;
-		com.xiong.test.ListNode[] array = new com.xiong.test.ListNode[2];
+		ListNode[] array = new ListNode[2];
 		array[0] = node1;
 		array[1] = node11;
-		com.xiong.test.ListNode node = mergeKLists(array);
-		com.xiong.test.ListNode.show(node);
+		ListNode node = mergeKLists(array);
+		ListNode.show(node);
 		
 		//ListNode.show(delete1(node1, 1));
 		//ListNode.show(getK(node1, 4));

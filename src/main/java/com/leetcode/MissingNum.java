@@ -53,10 +53,10 @@ public class MissingNum {
 	 * Given an unsorted integer array, 
 	 * find the smallest missing positive integer.
 	 * 找出最小的那个，从1开始
-	 * @param nums
+	 * @param nums 传入数组
 	 */
     public static int firstMissingPositive(int[] nums) {
-    	List<Integer> list = new ArrayList<>();
+    	List<Integer> list = new ArrayList<Integer>();
         int index = 1;
         for (int i = 0; i < nums.length; i++) {
 			list.add(nums[i]);

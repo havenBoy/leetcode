@@ -90,8 +90,9 @@ public class TwoSum {
 		int target = 9;
 		//int[] array = twoSum(nums, target);
 		//int[] array = twoSum1(nums, target);
-		System.out.println(twosum(nums, target)[0]);
-		System.out.println(twosum(nums, target)[1]);
+		//System.out.println(twosum(nums, target)[0]);
+		//System.out.println(twosum(nums, target)[1]);
+		System.out.println("hello world");
 	}
 
 }
