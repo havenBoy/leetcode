@@ -56,7 +56,7 @@ public class SearchRotatedArray {
 	public static void main(String[] args) {
 		int[] nums = {3,5,0,1,2};
 		Arrays.sort(nums);
-		com.xiong.test.Utils.show(nums);
+		Utils.show(nums);
 		//System.out.println(searchRotated(nums, 3));
 		//System.out.println(findMin(nums));
 	}

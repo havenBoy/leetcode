@@ -23,23 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4319a7a-4a98-4cee-b0f1-9a33ae953bc0" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/leetcode.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/ListProblems.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/ListProblems.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/MissingNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/MissingNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/PathSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/PathSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/RemoveElement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/RemoveElement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRange.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRange.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SingleNum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SingleNum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SmallCount.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SmallCount.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/StockProblem.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/StockProblem.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test01.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/Test01.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test02.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/Test04.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/Test04.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/ThreeSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/ThreeSum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/TreeNode.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/TreeNode.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/TwoSum.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/TwoSum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/InterSectionArrays.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/InterSectionArrays.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/MoveK.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/MoveK.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/PlusOne.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/PlusOne.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRotatedArray.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/leetcode/SearchRotatedArray.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +76,33 @@
       <recent name="F:\others\leetcode" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test01 (1)">
+  <component name="RunManager" selected="Application.SmallCount">
+    <configuration name="PlusOne" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.PlusOne" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SmallCount" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.SmallCount" />
+      <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="Test01 (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.sangfor.security.test.Test01" />
       <module name="leetcode" />
@@ -109,18 +123,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Test02" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Test02" />
+    <configuration name="Test05" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.leetcode.Test05" />
       <module name="leetcode" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.leetcode.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SmallCount" />
+        <item itemvalue="Application.PlusOne" />
+        <item itemvalue="Application.Test05" />
         <item itemvalue="Application.Test01 (1)" />
         <item itemvalue="Application.Test01" />
-        <item itemvalue="Application.Test02" />
       </list>
     </recent_temporary>
   </component>

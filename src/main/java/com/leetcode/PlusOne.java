@@ -83,7 +83,7 @@ public class PlusOne {
 	public static void main(String[] args) {
 		System.out.println(binaryPlus("111", "1"));
 		int[] nums = {9,9,9};
-		com.xiong.test.Utils.show(plusOne(nums));
+		Utils.show(plusOne(nums));
 		System.out.println(sum(1, 2));
 	}
 

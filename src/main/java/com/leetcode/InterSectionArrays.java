@@ -61,7 +61,7 @@ public class InterSectionArrays {
 	public static void main(String[] args) {
 		int[] nums1 = {1,3,4,0,0};
 		int[] nums2 = {2,5};
-		com.xiong.test.Utils.show(merge(nums1, nums2));
+		Utils.show(merge(nums1, nums2));
 		//Utils.show(interSection(nums1, nums2));
 	}
 

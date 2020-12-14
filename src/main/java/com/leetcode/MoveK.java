@@ -26,7 +26,7 @@ public class MoveK {
 	
 	public static void main(String[] args) {
 		int[] nums = {1,2,3,4,5};
-		com.xiong.test.Utils.show(move(nums, 3));
+		Utils.show(move(nums, 3));
 	}
 
 }
