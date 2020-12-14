@@ -1,14 +1,18 @@
 package com.leetcode;
 
-import javax.swing.Spring;
-
 /**
+ * 动态规划问题收集
  * @version 2.0.0
  * @author 赵小雄59782
  * @date 2020/12/8 14:56
  */
 public class Test05 {
 
+    /**
+     * 抢劫问题
+     * @param nums 传入数组参数
+     * @return  返回最大收益数值
+     */
     public static int robbery(int[] nums) {
         if (nums.length == 1) {
             return nums[0];
@@ -25,6 +29,11 @@ public class Test05 {
         return res[nums.length-1];
     }
 
+    /**
+     * 股票的最大收益问题，一次买卖
+     * @param nums
+     * @return
+     */
     public static int stock(int[] nums) {
         if (nums.length < 2) {
             return 0;
