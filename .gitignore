@@ -4,5 +4,5 @@
 .project
 .gitkeep
 .classpath
-.idea/
+.idea/*.xml
 *.log
