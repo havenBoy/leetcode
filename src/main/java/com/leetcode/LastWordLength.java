@@ -29,6 +29,36 @@ public class LastWordLength {
 		}
  		return res;
 	}
+
+	/**
+	 * 暴力匹配字符串
+	 * @param string
+	 * @param pattern
+	 * @return
+	 */
+	public static int hardMatch(String string, String pattern) {
+		int strLen = string.length();
+		int plen = pattern.length();
+
+		int i = 0, j = 0;
+
+		while (i < strLen && j < plen) {
+			if (string.charAt(i) == pattern.charAt(j)) {
+				i++;
+				j++;
+			} else {
+				j = 0;
+				i = i - j + 1;
+			}
+		}
+
+		if (j == plen) {
+			return i - j + 1;
+		} else {
+			return -1;
+		}
+
+	}
 	
 	public static void main(String[] args) {
 		int[] nums = {1,2,3,4};
@@ -37,6 +67,11 @@ public class LastWordLength {
 		System.out.println(longestCommonPrefix(str));
 		String string = "  ss";
 		System.out.println(lengthOfLastWord(string));
+
+		String longString = "AACCABCD";
+        String pattern = "ABCD";
+
+		System.out.println(hardMatch(longString, pattern));
 	}
 
 }
