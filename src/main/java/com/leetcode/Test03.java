@@ -16,9 +16,9 @@ public class Test03 {
      *
      * @author zxx
      * @date 2020/11/30 20:50
-     * @param arr
-     * @param num
-     * @return 
+     * @param arr 数组
+     * @param num 目标数字
+     * @return  返回下标索引值
      */
     public static int findNum(int[] arr, int num) {
         if (null == arr || arr.length == 0) {
@@ -49,10 +49,10 @@ public class Test03 {
      *
      * @author zxx
      * @date 2020/11/30 20:54
-     * @param num 二维数组
-     * @return 
+     * @param nums 二维数组
+     * @return  true或者false
      */
-    public static boolean findNum(int[][] num) {
+    public static boolean findNum(int[][] nums) {
         return false;
     }
 
@@ -62,8 +62,8 @@ public class Test03 {
      *
      * @author zxx
      * @date 2020/11/30 20:51
-     * @param num
-     * @return 
+     * @param num  输入数组
+     * @return void
      */
     public static void groupNum(int[] num) {
         if (null == num || num.length == 1) {
@@ -113,8 +113,8 @@ public class Test03 {
      * 26.移除重复元素
      * 将排序数组中重复的元素删除，使得元素只出现一次,返回数组最终长度
      * 思路：双指针法
-     * array  数组
-     * @return
+     * @param array  数组
+     * @return int 数组最终长度
      */
 
     public static int removeDuplicates(int[] array) {
@@ -135,7 +135,11 @@ public class Test03 {
         return start;
     }
 
-    //打印工具类
+
+    /**
+     * 打印数组工具类
+     * @param num  输入数组
+     */
     public static void print(int[] num) {
         for (int i = 0; i < num.length; i++) {
             System.out.print(num[i] + "->");
