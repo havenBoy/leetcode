@@ -8,6 +8,7 @@ package com.leetcode;
  * 1.余数为0，那么全部取3
  * 2.余数为1时,取2*2较大
  * 3.余数为2时,取1个2，其余的取3
+ * 也可当做动态规划处理
  */
 public class IntergerBreak {
 	
@@ -23,6 +24,20 @@ public class IntergerBreak {
 			}
 		}
 		return res;
+	}
+
+	public static int integerBreak(int n) {
+		int[] dp = new int[n+1];
+		if (n <= 2) return 1;
+		if (n == 3) return 2;
+		dp[2] = 1;
+		dp[3] = 2;
+		for (int i = 3; i < n; i++) {
+			for (int j = 1; j <i; j++) {
+				dp[i] = Math.max(dp[i], 0);
+			}
+		}
+		return dp[n];
 	}
 	
 	public static void main(String[] args) {

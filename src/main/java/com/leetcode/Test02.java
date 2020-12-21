@@ -3,7 +3,7 @@ package com.leetcode;
 import java.util.Vector;
 
 /**
- * 斐波那契数列，递归
+ * 动态规划收集
  * @version 2.0.0
  * @author 赵小雄59782
  * @date 2020/11/30 11:23
