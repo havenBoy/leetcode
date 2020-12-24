@@ -56,6 +56,32 @@ public class Test03 {
         return false;
     }
 
+    /**
+     * 判断一个数字是否为回文数字
+     * @param num  传入数字
+     * @return 返回是否为回文数字
+     */
+    public static boolean isPalindrome(int num) {
+        if (num < 0) {
+            return false;
+        }
+        String numStr = String.valueOf(num);
+        if (numStr.length() == 1) {
+            return true;
+        }
+        int start = 0;
+        int end = numStr.length() - 1;
+        while (start < end) {
+            if (numStr.charAt(start) == numStr.charAt(end)) {
+                start++;
+                end--;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
     /*** 
      * 剑指OFFER：21
      * 数组归类，左边奇数右边偶数
@@ -153,5 +179,7 @@ public class Test03 {
         //groupNum(arr);
         System.out.println(removeDuplicates(arr));
         print(arr);
+
+        System.out.println(isPalindrome(121));
     }
 }
