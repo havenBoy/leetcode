@@ -1,7 +1,6 @@
 package com.leetcode;
 
 /**
- * 题目1：对数组中的最后一位进行加1的运算 [1,2,3,4]->[1,2,3,5]
  * 题目2：实现字符串的二进制加法  “111” + “11” = “1010”
  * 题目3：不使用+ -运算，计算2数字之和
  * @author 作者:XiaoXiong
@@ -55,35 +54,9 @@ public class PlusOne {
 		}
 		return result.reverse().toString();
 	}
-	/**
-	 * 数组的最后一个数字的"加法"
-	 * @param nums
-	 * @return
-	 */
-	public static int[] plusOne(int[] nums) {
-		int index = nums.length-1;
-		while(index >= 0) {
-			int temp = nums[index];
-			if (nums[index] != 9) {
-				nums[index] = temp + 1;
-				break;
-			} else {
-				nums[index] = 0;
-				if (index == 0) {
-					int[] array = new int[nums.length+1];
-					array[0] = 1;
-					return array;
-				}
-				index--;
-			}
-		}
-		return nums;
-	}
 	
 	public static void main(String[] args) {
 		System.out.println(binaryPlus("111", "1"));
-		int[] nums = {9,9,9};
-		Utils.show(plusOne(nums));
 		System.out.println(sum(1, 2));
 	}
 
