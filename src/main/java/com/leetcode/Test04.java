@@ -1,8 +1,5 @@
 package com.leetcode;
 
-import java.util.Set;
-import javax.swing.tree.TreeNode;
-
 /**
  * 二叉树操作
  * @version 2.0.0
@@ -58,18 +55,18 @@ public class Test04 {
      *
      * @author 赵小雄59782
      * @date 2020/11/30 20:25
-     * @param node
-     * @return
+     * @param node  二叉树节点
+     * @return  返回最大深度值
      */
     public static int minDepth(BinaryTree node) {
         if (null == node) {
             return 0;
         }
         if (node.left == null) {
-            return minDepth(node.left) + 1;
+            return minDepth(null) + 1;
         }
         if (node.right == null) {
-            return minDepth(node.right) + 1;
+            return minDepth(null) + 1;
         }
 
         int left_depth = minDepth(node.left);
@@ -85,7 +82,7 @@ public class Test04 {
      * @date 2020/11/30 20:26
      * @param node1 入参1
      * @param node2 入参2
-     * @return
+     * @return 返回是否相等参数
      */
     public boolean checkTree(BinaryTree node1, BinaryTree node2) {
         if (null == node1 && null == node2) {
