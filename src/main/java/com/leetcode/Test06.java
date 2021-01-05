@@ -27,6 +27,30 @@ public class Test06 {
     }
 
     /**
+     * 计算最后一个单词的长度，假设字符串只有字母与空格组成
+     * 思路：
+     * 从字符串的末尾开始遍历，只要经过不为空格的字母开始算起，直到遍历到字符串的起始
+     * @param str  原始字符串
+     * @return 最后一个单词的长度
+     */
+    public static int getLastWordLen(String str) {
+        int len = str.length() - 1;
+        int count = 0;
+        boolean flag = false;
+        while (len >= 0) {
+            Character character = str.charAt(len);
+            if (!character.equals(' ')) {
+                count++;
+                flag = true;
+            } else if (flag){
+                break;
+            }
+            len--;
+        }
+        return count;
+    }
+
+    /**
      * 暴力匹配字符串
      * 思路：
      * @param string  原始字符串
@@ -121,6 +145,9 @@ public class Test06 {
 
         System.out.println(hardMatch(longString, pattern));
         System.out.println(kmpMatch(longString, pattern));
+
+        String string = "    Hello World ";
+        System.out.println(getLastWordLen(string));
     }
 
 }
