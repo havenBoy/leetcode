@@ -35,22 +35,22 @@ public class Test06 {
      */
     public static int hardMatch(String string, String pattern) {
         int strLen = string.length();
-        int plen = pattern.length();
+        int pLen = pattern.length();
 
         int i = 0, j = 0;
 
-        while (i < strLen && j < plen) {
+        while (i < strLen && j < pLen) {
             if (string.charAt(i) == pattern.charAt(j)) {
                 i++;
                 j++;
             } else {
-                j = 0;
                 i = i - j + 1;
+                j = 0;
             }
         }
 
-        if (j == plen) {
-            return i - j + 1;
+        if (j == pLen) {
+            return i - j;
         } else {
             return -1;
         }
@@ -116,8 +116,8 @@ public class Test06 {
         String[] str = {"flower", "flow", "flight"};
         System.out.println(longestCommonPrefix(str));
 
-        String longString = "ABCCABCD";
-        String pattern = "ABCD";
+        String longString = "mississippi";
+        String pattern = "issip";
 
         System.out.println(hardMatch(longString, pattern));
         System.out.println(kmpMatch(longString, pattern));
