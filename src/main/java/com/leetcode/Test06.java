@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 /**
  * KMP算法描述
+ *
  * @author 作者:XiaoXiong
- * @version
  */
 public class Test06 {
 
@@ -13,7 +13,8 @@ public class Test06 {
      * 找出字符串数组中的最大公共字符串
      * 如果没有公共字符串，则返回空字符串
      * 思路：
-     * @param strs  字符串数组
+     *
+     * @param strs 字符串数组
      * @return 返回最长相同前缀字符串
      */
     public static String longestCommonPrefix(String[] strs) {
@@ -30,7 +31,8 @@ public class Test06 {
      * 计算最后一个单词的长度，假设字符串只有字母与空格组成
      * 思路：
      * 从字符串的末尾开始遍历，只要经过不为空格的字母开始算起，直到遍历到字符串的起始
-     * @param str  原始字符串
+     *
+     * @param str 原始字符串
      * @return 最后一个单词的长度
      */
     public static int getLastWordLen(String str) {
@@ -42,7 +44,7 @@ public class Test06 {
             if (!character.equals(' ')) {
                 count++;
                 flag = true;
-            } else if (flag){
+            } else if (flag) {
                 break;
             }
             len--;
@@ -53,6 +55,7 @@ public class Test06 {
     /**
      * 暴力匹配字符串
      * 思路：
+     *
      * @param string  原始字符串
      * @param pattern 匹配字符串
      * @return 返回首次匹配下标
@@ -83,6 +86,7 @@ public class Test06 {
     /**
      * KMP匹配算法
      * 思路:
+     *
      * @param string  原始字符串
      * @param pattern 匹配字符串
      * @return 返回首次匹配的下标
@@ -114,8 +118,9 @@ public class Test06 {
     /**
      * 获取下一次j偏移的位置
      * 思路：
-     * @param pattern  匹配字符串
-     * @return  返回数组
+     *
+     * @param pattern 匹配字符串
+     * @return 返回数组
      */
     public static int[] getNext(String pattern) {
         int len = pattern.length();
@@ -136,6 +141,32 @@ public class Test06 {
         return next;
     }
 
+    /**
+     * 判断一个字符串是否为回文串，只需要考虑字母与数字
+     *
+     * @param str
+     * @return 是否为回文数字
+     */
+    public static boolean isPalindrome(String str) {
+        int start = 0;
+        int end = str.length() - 1;
+        while (start < end) {
+            Character startCharacter = str.charAt(start);
+            Character endCharacter = str.charAt(end);
+            if (Character.toLowerCase(startCharacter) == Character.toLowerCase(endCharacter)) {
+                start++;
+                end--;
+            } else if (!Character.isLetter(startCharacter) && !Character.isDigit(startCharacter)) {
+                start++;
+            } else if (!Character.isLetter(endCharacter) && !Character.isDigit(endCharacter)) {
+                end--;
+            } else {
+                return false;
+            }
+        }
+        return true;
+    }
+
     public static void main(String[] args) {
         String[] str = {"flower", "flow", "flight"};
         System.out.println(longestCommonPrefix(str));
@@ -148,6 +179,16 @@ public class Test06 {
 
         String string = "    Hello World ";
         System.out.println(getLastWordLen(string));
+
+        Character character1 = 'A';
+        Character character2 = 'a';
+
+        System.out.println(character1.toString().equalsIgnoreCase(character2.toString()));
+
+        String str11 = "A man, a plan, a canal: Panama";
+        String str22 = "a32a";
+
+        System.out.println(isPalindrome(str22));
     }
 
 }
