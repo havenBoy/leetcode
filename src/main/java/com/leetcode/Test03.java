@@ -1,7 +1,9 @@
 package com.leetcode;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 /**
  * 二分法查找以及延伸：双指针法
@@ -80,6 +82,28 @@ public class Test03 {
             }
         }
         return true;
+    }
+    /**
+     * 无重复字符的最长字符串
+     * @param str  传入字符串
+     * @return 返回是否为回文数字
+     */
+    public static int lengthOfLongestSubstring(String str) {
+        int result = 0;
+        for (int i = 0; i < str.length(); i++) {
+            Set<Character> set = new HashSet<Character>();
+            set.add(str.charAt(i));
+            for (int j = i + 1; j < str.length(); j++) {
+                Character character = str.charAt(j);
+                if (set.contains(character)) {
+                    break;
+                } else {
+                    set.add(character);
+                }
+            }
+            result = Math.max(result, set.size());
+        }
+        return result;
     }
 
     /*** 
@@ -181,5 +205,9 @@ public class Test03 {
         print(arr);
 
         System.out.println(isPalindrome(121));
+
+        String str = "abcabcbb";
+        String str1 = "  ";
+        System.out.println(lengthOfLongestSubstring(str1));
     }
 }
