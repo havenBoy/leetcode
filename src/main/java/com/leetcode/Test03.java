@@ -83,6 +83,28 @@ public class Test03 {
         }
         return true;
     }
+
+    public static int maxArea(int[] height) {
+        int length = height.length;
+        if (length <= 1) {
+            return 0;
+        }
+        int start = 0;
+        int end = length - 1;
+        int result = 0;
+        while (start < end) {
+            int startNum = height[start];
+            int endNum = height[end];
+            result = Math.max(result, (end - start) * Math.min(startNum, endNum));
+            if (startNum >= endNum) {
+                end--;
+            } else {
+                start++;
+            }
+        }
+        return result;
+    }
+
     /**
      * 无重复字符的最长字符串
      * @param str  传入字符串
@@ -209,5 +231,10 @@ public class Test03 {
         String str = "abcabcbb";
         String str1 = "  ";
         System.out.println(lengthOfLongestSubstring(str1));
+
+        //int[] nums = {1,8,6,2,5,4,8,3,7};
+
+        int[] nums = {1,1};
+        System.out.println(maxArea(nums));
     }
 }
