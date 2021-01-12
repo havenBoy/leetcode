@@ -28,33 +28,59 @@ public class StringProblem {
         return reverseNum;
     }
 
+    /**
+     * 字符串转数字  遇到正负以及空格跳过，
+     * 从第一个不为字母的数字开始，到不为数字结束
+     * @param str  入参字符串
+     * @return 返回有效的整型数字
+     */
     public static int myAtoi(String str) {
         int result = 0;
+        boolean flag = true;
         for (int i = 0; i < str.length(); i++) {
             Character character = str.charAt(i);
-            if (character.equals('+') || character.equals('-') || Character.isDigit(character) || character.equals(' ')) {
+            if (character.equals('+') || character.equals('-')
+                    || Character.isDigit(character) || character.equals(' ')) {
                 if (character.equals('+') || character.equals('-') || character.equals(' ')) {
-                    continue;
+                    if (result != 0) {
+                        break;
+                    } else {
+                        if (character.equals('-')) {
+                            flag = false;
+                        }
+                        continue;
+                    }
                 }
                 if (Character.isDigit(character)) {
-                    int num = Integer.valueOf(character.toString());
+                    int num = Character.getNumericValue(character);
+                    if (flag) {
+                        if (result > 214748364 || (result == 214748364 && num > 7)) {
+                            result = Integer.MAX_VALUE - 1;
+                            return result;
+                        }
+                    } else {
+                        if (result > 214748364 || (result == 214748364 && num > 7)) {
+                            return -Integer.MAX_VALUE - 1;
+                        }
+                    }
                     result = result * 10 + num;
                 }
             } else {
                 break;
             }
         }
-        return result;
+        return flag ? result : -result;
     }
 
     public static void main(String[] args) {
 
-        int num = 1099555558;
+        int num = 1099555551;
         System.out.println(reverse(num));
 
-        String str = "-4a12";
+        String str = "-+12";
         System.out.println(myAtoi(str));
 
-        System.out.println(Character.valueOf('4'));
+        int aa = -2147483648;
+        System.out.println(aa);
     }
 }

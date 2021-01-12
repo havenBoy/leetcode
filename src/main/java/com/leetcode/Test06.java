@@ -9,11 +9,12 @@ import java.util.Arrays;
  */
 public class Test06 {
 
-    /**
+    /** leetcode:14
      * 找出字符串数组中的最大公共字符串
      * 如果没有公共字符串，则返回空字符串
-     * 思路：
-     *
+     * 思路：将第一个字符串当做符合条件返回的字符串
+     * 如果不满足，逐渐收缩当前字符串，使得满足条件
+     * 返回即为结果字符串
      * @param strs 字符串数组
      * @return 返回最长相同前缀字符串
      */
@@ -21,10 +22,30 @@ public class Test06 {
         if (strs.length == 0) return "";
         String res = strs[0];
         for (int i = 1; i < strs.length; i++) {
-            while (strs[i].indexOf(res) != 0)
+            while (strs[i].indexOf(res) != 0) {
                 res = res.substring(0, res.length() - 1);
+            }
         }
         return res;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public static int mySqrt(int num) {
+        int start = 0, end = num;
+        while (start <= end) {
+            int result = (start + end) / 2;
+            if (result * result == num) {
+                return result;
+            } else if (result * result > num) {
+                end--;
+            } else {
+                start++;
+            }
+        }
+        return end;
     }
 
     /**
@@ -189,6 +210,9 @@ public class Test06 {
         String str22 = "a32a";
 
         System.out.println(isPalindrome(str22));
+
+        int num = 10;
+        System.out.println(mySqrt(2147395599));
     }
 
 }
