@@ -134,7 +134,16 @@ public class SqurtNum {
 		int result = 0;
 		int step = num;
 		while (step * step > num) {
+			step = step / 2;
 		}
+
+		for (int i = step; i >= 1; i/=2) {
+			step += i;
+			if (step * step <= num) {
+				break;
+			}
+		}
+		return  step;
 	}
 
 	public static void main(String[] args) {
