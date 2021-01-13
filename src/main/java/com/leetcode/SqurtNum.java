@@ -96,25 +96,25 @@ public class SqurtNum {
 		
 		return n > 0 ? (n & (n-1)) == 0 : false;
 	}
-	
-	/**
+
+	/** 错误示例
 	 * @param num
 	 * 算出一个数字的平方根（二分法查找的时间复杂度依然较高）
 	 */
-	public static int getSqrt(int num) {
-		int low = 1,high = num;
-		while(low <= high) {
-			int x = (low + high)/2;
-			if (x*x == num) {
-				return x;
-			} else if (x*x > num){ 
-				high = x-1;
-			} else {
-				low = x+1;
-			}
-		}
-		return high;
-	}
+//	public static int getSqrt(int num) {
+//		int low = 1,high = num;
+//		while(low <= high) {
+//			int x = (low + high)/2;
+//			if (x*x == num) {
+//				return x;
+//			} else if (x*x > num){
+//				high = x-1;
+//			} else {
+//				low = x+1;
+//			}
+//		}
+//		return high;
+//	}
 	/**
 	 * 算出一个数字的平方根
 	 * @param num
@@ -129,33 +129,38 @@ public class SqurtNum {
 	    }
 	    return k;
 	}
-
+	/**
+	 * 二分法计算一个数字的平方根
+	 * @param num  输入整数
+	 * @return 返回平方根
+	 */
 	public static int mySqrt(int num) {
-		int result = 0;
-		int step = num;
-		while (step * step > num) {
-			step = step / 2;
+		if (num <= 1) {
+			return num;
 		}
-
-		for (int i = step; i >= 1; i/=2) {
-			step += i;
-			if (step * step <= num) {
-				break;
+		int start = 0, end = num;
+		while (start <= end) {
+			int mid = (start + end) / 2;
+			if (mid == num / mid) {
+				return mid;
+			} else if (mid > num / mid) {
+				end = mid - 1;
+			} else {
+				start = mid + 1;
 			}
 		}
-		return  step;
+		return start - 1;
 	}
 
 	public static void main(String[] args) {
 
 		System.out.println(divide(-2147483648, -1));
 		System.out.println((2^31-1) < 2147395599);
-		System.out.println(sqrt(100));
-		//System.out.println(getSqrt(2147395599));
+		System.out.println(sqrt(2147395599));
 		//System.out.println(isPowerOfTwo(128));
 		//System.out.println(isPowerOfThree2(80));
 
-		System.out.println(mySqrt(101));
+		System.out.println(mySqrt(2));
 	}
 
 }
