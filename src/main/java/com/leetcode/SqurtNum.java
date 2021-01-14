@@ -160,10 +160,11 @@ public class SqurtNum {
 	 */
 	public static int[] searchRange(int[] nums, int target) {
 		int[] result = {-1, -1};
+		int start = 0, end = nums.length - 1;
 		//左边界查询方法
-		int left = leftSearch(nums, target);
+		int left = leftSearch(nums, target, start, end);
 		//右边界查询
-		int right = rightSearch(nums, target);
+		int right = rightSearch(nums, target, start, end);
 		if (left > right) {
 			return result;
 		}
@@ -172,8 +173,7 @@ public class SqurtNum {
 		return result;
  	}
 
- 	private static int leftSearch(int[] nums, int target) {
-		int start = 0, end = nums.length - 1;
+ 	private static int leftSearch(int[] nums, int target, int start, int end) {
 		while (start <= end) {
 			int mid = start + ((end - start) >> 1);
 			if (target > nums[mid]) {
@@ -185,8 +185,7 @@ public class SqurtNum {
 		return start;
 	}
 
-	private static int rightSearch(int[] nums, int target) {
-		int start = 0, end = nums.length - 1;
+	private static int rightSearch(int[] nums, int target, int start, int end) {
 		while (start <= end) {
 			int mid = start + ((end - start) >> 1);
 			if (target < nums[mid]) {
