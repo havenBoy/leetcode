@@ -152,15 +152,63 @@ public class SqurtNum {
 		return start - 1;
 	}
 
+	/**
+	 * 搜索排序数组的左边界与右边界
+	 * @param nums 待查询数组
+	 * @param target 目标值
+	 * @return 返回左右边界的下表，如果不存在，返回{-1，-1}
+	 */
+	public static int[] searchRange(int[] nums, int target) {
+		int[] result = {-1, -1};
+		//左边界查询方法
+		int left = leftSearch(nums, target);
+		//右边界查询
+		int right = rightSearch(nums, target);
+		if (left > right) {
+			return result;
+		}
+		result[0] = left;
+		result[1] = right;
+		return result;
+ 	}
+
+ 	private static int leftSearch(int[] nums, int target) {
+		int start = 0, end = nums.length - 1;
+		while (start <= end) {
+			int mid = start + ((end - start) >> 1);
+			if (target > nums[mid]) {
+				start = mid + 1;
+			} else if (target <= nums[mid]){
+				end = mid - 1;
+			}
+		}
+		return start;
+	}
+
+	private static int rightSearch(int[] nums, int target) {
+		int start = 0, end = nums.length - 1;
+		while (start <= end) {
+			int mid = start + ((end - start) >> 1);
+			if (target < nums[mid]) {
+				end = mid - 1;
+			} else if (nums[mid] <= target){
+				start = mid + 1;
+			}
+		}
+		return end;
+	}
+
 	public static void main(String[] args) {
 
-		System.out.println(divide(-2147483648, -1));
-		System.out.println((2^31-1) < 2147395599);
-		System.out.println(sqrt(2147395599));
+//		System.out.println(divide(-2147483648, -1));
+//		System.out.println((2^31-1) < 2147395599);
+//		System.out.println(sqrt(2147395599));
 		//System.out.println(isPowerOfTwo(128));
 		//System.out.println(isPowerOfThree2(80));
 
-		System.out.println(mySqrt(2));
+		int[] nums = {5,7,7,8,8,10};
+		int target = 7;
+		System.out.println(searchRange(nums, target)[0] + "--" + searchRange(nums, target)[1]);
 	}
 
 }
