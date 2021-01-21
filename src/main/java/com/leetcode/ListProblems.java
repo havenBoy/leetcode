@@ -101,7 +101,7 @@ public class ListProblems {
 	 */
 	public static ListNode reverse(ListNode head) {
 		if(head == null || head.next == null) return head;
-		ListNode p = head,newHead = null;
+		ListNode p = head, newHead = null;
 		while (p != null) {
 			ListNode temp = p.next;
 			p.next = newHead;
@@ -163,11 +163,11 @@ public class ListProblems {
 		if(head == null) return 0;
 		ListNode slow = head, fast = head;
 		int count = 0;
-		while(fast.next != null && fast.next.next == null) {
+		while(fast.next != null && fast.next.next != null) {
 			slow = slow.next;
 			fast = fast.next.next;
 			if(slow == fast) {
-				while(fast.next != null && fast.next.next == null) {
+				while(fast.next != null && fast.next.next != null) {
 					slow = slow.next;
 					fast = fast.next.next;
 					count++;

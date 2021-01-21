@@ -156,6 +156,14 @@ public class SqrtNum {
         return result;
     }
 
+    /**
+     * 左边界的定位
+     * @param numbs 入参数组
+     * @param target 目标值
+     * @param start 起始索引值
+     * @param end 结束索引值
+     * @return 返回左边界下标值
+     */
     private static int leftSearch(int[] numbs, int target, int start, int end) {
         while (start <= end) {
             int mid = start + ((end - start) >> 1);
@@ -168,6 +176,14 @@ public class SqrtNum {
         return start;
     }
 
+    /**
+     * 右边界的定位
+     * @param nums 入参数组
+     * @param target 目标值
+     * @param start 起始索引值
+     * @param end 结束索引值
+     * @return 返回左边界下标值
+     */
     private static int rightSearch(int[] nums, int target, int start, int end) {
         while (start <= end) {
             int mid = start + ((end - start) >> 1);
