@@ -178,18 +178,18 @@ public class SqrtNum {
 
     /**
      * 右边界的定位
-     * @param nums 入参数组
+     * @param numbs 入参数组
      * @param target 目标值
      * @param start 起始索引值
      * @param end 结束索引值
      * @return 返回左边界下标值
      */
-    private static int rightSearch(int[] nums, int target, int start, int end) {
+    private static int rightSearch(int[] numbs, int target, int start, int end) {
         while (start <= end) {
             int mid = start + ((end - start) >> 1);
-            if (target < nums[mid]) {
+            if (target < numbs[mid]) {
                 end = mid - 1;
-            } else if (nums[mid] <= target) {
+            } else if (numbs[mid] <= target) {
                 start = mid + 1;
             }
         }
@@ -203,9 +203,10 @@ public class SqrtNum {
         System.out.println(isPowerOfTwo(128));
         System.out.println(isPowerOfThree2(80));
 
-        int[] nums = {5, 7, 7, 8, 8, 10};
+        int[] numbs = {5, 7, 7, 8, 8, 10};
         int target = 8;
-        System.out.println(searchRange(nums, target)[0] + "--" + searchRange(nums, target)[1]);
+        int[] arr = searchRange(numbs, target);
+        System.out.println(arr[0] + "--" + arr[1]);
     }
 
 }

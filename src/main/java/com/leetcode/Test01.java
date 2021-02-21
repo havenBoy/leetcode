@@ -15,8 +15,8 @@ public class Test01 {
      * 链表结构定义
      */
     private static class ListNode {
-        int value;
-        ListNode next;
+        private int value;
+        private ListNode next;
 
         private ListNode() {
 

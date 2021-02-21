@@ -4,8 +4,8 @@ public class PowFun {
 	
 	/**
 	 * 整数的反转
-	 * @param x
-	 * @return
+	 * @param x 待处理参数
+	 * @return 返回值
 	 */
 	public static int reverse(int x) {
 		long result = 0;
@@ -43,8 +43,8 @@ public class PowFun {
 	
 	/**
 	 * 判断一个字符串可以转化为数字
-	 * @param s
-	 * @return
+	 * @param s 带出入参数
+	 * @return 待处理字符串
 	 */
 	public static boolean isNumber(String s) {
 		return s.matches("^\\s*[-+]?((\\d+(\\.\\d*)?)|(\\.\\d+))(e[-+]?\\d+)?\\s*$");

@@ -4,8 +4,8 @@ public class Palindrome {
 	
 	/**
 	 * 回文数的判断  
-	 * @param num
-	 * @return
+	 * @param num 待处理参数
+	 * @return 返回状态值
 	 */
 	
 	public static boolean checkPalindrome(int num) {

@@ -11,10 +11,7 @@ public class PalindromeString {
 	
 	public static boolean lower(char c) {
 		if (('A' <= c && 'z' >= c) || ('0' <= c && '9' >= c)) {
-			if (c == '`') {
-				return false;
-			}
-			return true;
+			return c != '`';
 		} else {
 			return false;
 		}

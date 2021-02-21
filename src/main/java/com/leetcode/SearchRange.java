@@ -5,29 +5,30 @@ import java.util.Collections;
 import java.util.List;
 
 public class SearchRange {
+
 	/***
 	 * 二分查找法,待做
-	 * @param nums
-	 * @param target
-	 * @return
+	 * @param numbs 传入数组
+	 * @param target 目标值
+	 * @return 返回数组
 	 */
-	public static int[] searchRange(int[] nums, int target) {
+	public static int[] searchRange(int[] numbs, int target) {
 		int [] array = new int[2];
 		array[0] = -1;array[1] = -1;
-		int low = 0, high = nums.length-1;
+		int low = 0, high = numbs.length-1;
 		while (low <= high) {
 			int mid = (low + high)/2;
-			if (nums[mid] == target) {
+			if (numbs[mid] == target) {
 				array[0] = mid;
-				while(mid <= nums.length-1 && mid >= 0) {
-					if (nums[mid++] != target) {
+				while(mid <= numbs.length-1 && mid >= 0) {
+					if (numbs[mid++] != target) {
 						array[1] = mid-1;
-					} else if (nums[mid--] != target){
+					} else if (numbs[mid--] != target){
 						array[0] = mid + 1;
 					}
 				}
 				break;
-			} else if (nums[mid] > target){
+			} else if (numbs[mid] > target){
 				high = mid - 1;
 			} else {
 				low = mid + 1;
@@ -38,17 +39,17 @@ public class SearchRange {
 	/***
 	 * 遍历一遍数组，记录等于目标值的下标，之后返回下标的最大值与最小值
 	 * 时间复杂度为n
-	 * @param nums
-	 * @param target
-	 * @return
+	 * @param numbs 传入数组
+	 * @param target 目标值
+	 * @return  返回数组
 	 */
-	public static int[] searchRange2(int[] nums, int target) {
+	public static int[] searchRange2(int[] numbs, int target) {
 		List<Integer> list = new ArrayList<Integer>();
 		int[] array = new int[2];
 		array[0] = -1;
 		array[1] = -1;
-		for (int i = 0; i < nums.length; i++) {
-			if (nums[i] == target) {
+		for (int i = 0; i < numbs.length; i++) {
+			if (numbs[i] == target) {
 				list.add(i);
 			}
 		}

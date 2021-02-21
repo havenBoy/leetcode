@@ -10,8 +10,8 @@ public class MajorityElement {
 	
 	/**
 	 * Roman转阿拉伯数字    I, V, X, L, C, D and M.
-	 * @param s
-	 * @return
+	 * @param s  待处理字符串
+	 * @return  返回数字值
 	 */
 	public static int romanToInt(String s) {
 		int[] res = new int[s.length()];
@@ -47,10 +47,6 @@ public class MajorityElement {
 		}
 		return sum+res[res.length-1];
 	}
-	
-/*	public static String intToRoman(int num) {
-		
-	}*/
 	
 	/***
 	 * 排序后，最多出现的数字在最中间位置
