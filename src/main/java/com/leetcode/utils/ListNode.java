@@ -1,4 +1,4 @@
-package com.leetcode;
+package com.leetcode.utils;
 
 /**
  * 链表工具类
@@ -10,7 +10,7 @@ public class ListNode {
 	
 	public int val;
     public ListNode next;
-    ListNode(int x) { this.val = x; }
+    public ListNode(int x) { this.val = x; }
     
     /***
      * 遍历打印列表
@@ -22,10 +22,6 @@ public class ListNode {
 			System.out.print(node.val + "->");
 			node = node.next;
 		}
-	}
-
-	public static void init() {
-
 	}
 
 }
