@@ -2,7 +2,7 @@ package com.leetcode.problems;
 
 import com.leetcode.utils.ListNode;
 
-public class Test02 {
+public class Test02_addTwoNumbers {
 
     /*
      * 题目描述

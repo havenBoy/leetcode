@@ -1,6 +1,6 @@
 package com.leetcode.problems;
 
-public class Test05 {
+public class Test05_longestPalindrome {
 
     /*
      * 题目描述

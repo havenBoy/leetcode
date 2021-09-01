@@ -1,6 +1,6 @@
 package com.leetcode.problems;
 
-public class Test09 {
+public class Test09_isPalindromeNum {
 
 
     /*

@@ -2,7 +2,7 @@ package com.leetcode.problems;
 
 import java.util.HashMap;
 
-public class Test01 {
+public class Test01_twoSum {
 
     /*
 	 * 题目描述：
@@ -92,7 +92,7 @@ public class Test01 {
 	 * @return  返回的2个数字组成的数组
      */
     public static int[] twoSum4(int[] nums, int target) {
-        int[] array = new int[2];
+        int[] array = {-1, -1};
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {

@@ -1,6 +1,6 @@
 package com.leetcode.problems;
 
-public class Test07 {
+public class Test07_reverseNum {
 
     /*
      * 题目描述

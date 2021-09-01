@@ -3,7 +3,7 @@ package com.leetcode.problems;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Test03 {
+public class Test03_lengthOfLongestSubstring {
 
     /*
      * 题目描述：
