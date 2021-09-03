@@ -31,20 +31,21 @@ public class Test07_reverseNum {
 
     /**
      * 整数的反转
+     *
      * @param x 待处理参数
      * @return 返回值
      */
     public static int reverse(int x) {
         long result = 0;
         long num = x;
-        if(num < 0) num = -num;
-        if(num > Integer.MAX_VALUE) return 0;
-        while(num >= 1) {
+        if (num < 0) num = -num;
+        if (num > Integer.MAX_VALUE) return 0;
+        while (num >= 1) {
             result = num % 10 + result * 10;
             num /= 10;
         }
         result = result > Integer.MAX_VALUE ? 0 : result;
         result = x < 0 ? -result : result;
-        return (int)result;
+        return (int) result;
     }
 }

@@ -9,7 +9,7 @@ public class Test19_removeNthFromEnd {
      * 删除列表的倒数第K个节点
      * @param head 表示头结点
      * @param k  表示倒数第K
-     * @return
+     * @return  返回新的链表
      */
 
     public static ListNode removeNthFromEnd(ListNode head, int k) {

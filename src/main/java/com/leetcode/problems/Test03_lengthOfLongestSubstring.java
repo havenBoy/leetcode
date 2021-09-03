@@ -1,5 +1,6 @@
 package com.leetcode.problems;
 
+import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -47,5 +48,28 @@ public class Test03_lengthOfLongestSubstring {
             result = Math.max(result, set.size());
         }
         return result;
+    }
+
+    /**
+     * 最大的不重复子串
+     * @param s  输入字符串
+     * @return  最大不重复子串长度
+     */
+    public static int lengthOfLongestSubstring2(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int maxLen = 0;
+        //滑动窗口左指针
+        int left = 0;
+        for (int i = 0; i < s.length(); i++) {
+            char character = s.charAt(i);
+            //left的下标取值为重复字符的下表+1
+            if (map.containsKey(character)) {
+                left = Math.max(left, map.get(character) + 1);
+            }
+            //更新character的位置
+            map.put(character, i);
+            maxLen = Math.max(maxLen, i - left + 1);
+        }
+        return maxLen;
     }
 }
