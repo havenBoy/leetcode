@@ -56,7 +56,7 @@ public class Test03_lengthOfLongestSubstring {
      * @return  最大不重复子串长度
      */
     public static int lengthOfLongestSubstring2(String s) {
-        HashMap<Character, Integer> map = new HashMap<>();
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int maxLen = 0;
         //滑动窗口左指针
         int left = 0;
