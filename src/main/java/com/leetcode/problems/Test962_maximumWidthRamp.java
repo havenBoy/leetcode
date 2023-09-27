@@ -2,12 +2,18 @@ package com.leetcode.problems;
 
 public class Test962_maximumWidthRamp {
 
-    /**
-     * 暴力解决
+    /*
+     * 题目描述：
      * 最大的坡宽度
-     * 给定一个整数数组 A，坡是元组 (i, j)，其中  i < j 且 A[i] <= A[j]。这样的坡的宽度为 j - i。
+     * 给定一个整数数组 A，坡是元组 (i, j)，其中  i < j 且 A[i] <= A[j]。这样的坡的宽度为 j - i
      * 找出 A 中的坡的最大宽度，如果不存在，返回 0
      * [6,0,8,2,1,5]  return 4
+     */
+
+    /**
+     * 暴力解决
+     * @param arr 给定数组
+     * @return 返回长度
      */
     public static int getMaximum_Width_Ramp(int[] arr) {
         int length = 0;
@@ -25,6 +31,15 @@ public class Test962_maximumWidthRamp {
             }
         }
         return length;
+    }
+
+    /**
+     * TODO 新的思路
+     * @param arr 给定数组
+     * @return 返回长度
+     */
+    public static int getMaximum_Width_Ramp_New(int[] arr) {
+        return 0;
     }
 
     public static void main(String[] args) {
