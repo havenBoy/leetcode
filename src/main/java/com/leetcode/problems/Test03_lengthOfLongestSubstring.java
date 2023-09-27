@@ -22,12 +22,12 @@ public class Test03_lengthOfLongestSubstring {
      * 输入: s = "pwwkew"
      * 输出: 3
      * 解释: 因为无重复字符的最长子串是"wke"，所以其长度为 3。
-     *     请注意，你的答案必须是 子串 的长度，"pwke"是一个子序列，不是子串。
+     *      请注意，你的答案必须是 子串 的长度，"pwke"是一个子序列，不是子串。
      *
      */
 
     /**
-     * 无重复字符的最长字符串
+     * 无重复字符的最长字符串长度
      *
      * @param str 传入字符串
      * @return 返回是否为回文数字标志
@@ -52,11 +52,12 @@ public class Test03_lengthOfLongestSubstring {
 
     /**
      * 最大的不重复子串
-     * @param s  输入字符串
-     * @return  最大不重复子串长度
+     *
+     * @param s 输入字符串
+     * @return 最大不重复子串长度
      */
     public static int lengthOfLongestSubstring2(String s) {
-        HashMap<Character, Integer> map = new HashMap<Character, Integer>();
+        HashMap<Character, Integer> map = new HashMap<Character, Integer>(10);
         int maxLen = 0;
         //滑动窗口左指针
         int left = 0;
@@ -71,5 +72,41 @@ public class Test03_lengthOfLongestSubstring {
             maxLen = Math.max(maxLen, i - left + 1);
         }
         return maxLen;
+    }
+
+    /**
+     * 无重复字符的最长字符串
+     *
+     * @param str 传入字符串
+     * @return 返回是否为回文数字标志
+     */
+    public static int LongestSubstring(String str) {
+        int result = 0;
+        for (int i = 0; i < str.length(); i++) {
+            Set<Character> set = new HashSet<Character>();
+            set.add(str.charAt(i));
+            for (int j = i + 1; j < str.length(); j++) {
+                Character character = str.charAt(j);
+                if (set.contains(character)) {
+                    break;
+                } else {
+                    set.add(character);
+                }
+            }
+            result = Math.max(result, set.size());
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        String str = "abcacb";
+
+        System.out.println(lengthOfLongestSubstring(str));
+        System.out.println(lengthOfLongestSubstring2(str));
+
+        String a1 = "abc";
+        String a2 = "acb";
+        System.out.println(a1.compareTo(a2));
+
     }
 }

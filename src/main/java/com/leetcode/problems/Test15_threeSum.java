@@ -5,7 +5,7 @@ import java.util.*;
 public class Test15_threeSum {
 
     /*
-    给你一个包含 n 个整数的数组nums，判断nums中是否存在三个元素 a，b，c ，
+    给你一个包含 n 个整数的数组nums，判断nums中是否存在三个元素 a，b，c
     使得a + b + c = 0 ？请你找出所有和为 0 且不重复的三元组。
     注意：答案中不可以包含重复的三元组
      */
@@ -21,13 +21,10 @@ public class Test15_threeSum {
         for (int i = 0; i < array.length - 2; i++) {
             for (int j = i + 1; j < array.length - 1; j++) {
                 for (int k = j + 1; k < array.length; k++) {
-                    List<Integer> list = new ArrayList<Integer>();
-                    if (array[k] + array[j] + array[i] == 0) {
-                        list.add(array[i]);
-                        list.add(array[j]);
-                        list.add(array[k]);
-                        set.add(list);
+                    if (array[k] + array[j] + array[i] != 0) {
+                        continue;
                     }
+                    set.add(new ArrayList<Integer>(Arrays.asList(array[i], array[j], array[k])));
                 }
             }
         }
