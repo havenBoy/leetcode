@@ -9,12 +9,14 @@ package com.leetcode.utils;
 public class ListNode {
 	
 	public int val;
+
     public ListNode next;
+
     public ListNode(int x) { this.val = x; }
     
     /***
      * 遍历打印列表
-     * @param node
+     * @param node 头节点
      */
     public static void show(ListNode node) {
     	if (node == null) return ;
