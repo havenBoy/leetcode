@@ -56,6 +56,11 @@ public class ArrayProblems {
         return count;
     }
 
+    public static void quickSort(int[] arr) {
+
+    }
+
+
     public static void main(String[] args) {
         int[] arr = {5, 4, 3, 2, 1, 10, 11, 13, 12};
         int target = 15;
