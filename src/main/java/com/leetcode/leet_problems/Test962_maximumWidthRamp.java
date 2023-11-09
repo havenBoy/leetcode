@@ -1,5 +1,7 @@
 package com.leetcode.leet_problems;
 
+import java.util.*;
+
 public class Test962_maximumWidthRamp {
 
     /*
@@ -39,12 +41,14 @@ public class Test962_maximumWidthRamp {
      * @return 返回长度
      */
     public static int getMaximum_Width_Ramp_New(int[] arr) {
+        Arrays.sort(arr);
         return 0;
     }
 
     public static void main(String[] args) {
-//        int[] arr = new int[] {6,0,8,2,1,5};
-        int[] arr = new int[] {9,8,1,0,1,9,4,0,4,1};
+        int[] arr = new int[] {6,0,8,2,1,5};
+//        int[] arr = new int[] {9,8,1,0,1,9,4,0,4,1};
         System.out.println(getMaximum_Width_Ramp(arr));
+        System.out.println(getMaximum_Width_Ramp_New(arr));
     }
 }
