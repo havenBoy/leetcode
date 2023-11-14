@@ -55,9 +55,30 @@ public class Test896_isMonotonic {
         return flag;
     }
 
+    /**
+     * 思路2：
+     * 保持2个变量保存每次比较后的结果，叠加后与数组的长度比较
+     * 只要有一个变量等于数组的长度即可认为数组是单调的
+     * 注意考虑到，元素均为相同的数字
+     * @param nums 输入数组
+     * @return 返回结果布尔值
+     */
+    public static boolean isMonotonic1(int[] nums) {
+        if (nums.length <= 1) {
+            return true;
+        }
+        int incr = 0, decr = 0;
+        for (int i = 1; i < nums.length; i++) {
+            incr += (nums[i-1] <= nums[i] ? 1 : 0);
+            decr += (nums[i-1] >= nums[i] ? 1 : 0);
+        }
+        return (incr == nums.length - 1) || (decr == nums.length - 1);
+    }
+
     public static void main(String[] args) {
-        int[] arr = {4,1,2,1};
+        int[] arr = {1,1,2,1,1};
         System.out.println(isMonotonic(arr));
+        System.out.println(isMonotonic1(arr));
     }
 
 }
