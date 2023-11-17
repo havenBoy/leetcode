@@ -39,8 +39,5 @@ public class Test347_topKFrequent {
         int[] nums = new int[] {1,2,3,2,1,1};
         int k = 2;
         System.out.println(Arrays.toString(topKFrequent(nums, k)));
-        TreeSet<Integer> set = new TreeSet<>(((o1, o2) -> o2 - o1));
-        set.addAll(Arrays.stream(nums).boxed().collect(Collectors.toList()));
-        set.forEach(System.out::println);
     }
 }
