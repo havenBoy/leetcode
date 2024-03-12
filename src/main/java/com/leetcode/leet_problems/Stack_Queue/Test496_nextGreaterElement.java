@@ -1,6 +1,8 @@
 package com.leetcode.leet_problems.Stack_Queue;
 
+import java.util.ArrayDeque;
 import java.util.Arrays;
+import java.util.Deque;
 
 public class Test496_nextGreaterElement {
 
@@ -38,17 +40,29 @@ public class Test496_nextGreaterElement {
     }
 
     /**
-     * TODO 新的思路
      *
-     * @param arr    给定数组
+     * @param heights    给定数组
      * @return 返回构造方式的个数
      */
-    public static int[] findTargetSumWaysNew(int[] arr) {
-        return new int[arr.length];
+    public static int[] findTargetSumWaysNew(int[] heights) {
+        int[] res = new int[heights.length];
+        Deque<Integer> deque = new ArrayDeque<>();
+        for (int i = heights.length - 1; i >= 0; i--) {
+            while (!deque.isEmpty() && heights[deque.peek()] <= heights[i]) {
+                deque.poll();
+            }
+            if (!deque.isEmpty()) {
+                res[i] = deque.peek() - i;
+            } else {
+                res[i] = -1;
+            }
+            deque.push(i);
+        }
+        return res;
     }
 
     public static void main(String[] args) {
         int[] arr = new int[]{2, 1, 2, 4, 3};
-        System.out.println(Arrays.toString(nextGreaterElement(arr)));
+        System.out.println(Arrays.toString(findTargetSumWaysNew(arr)));
     }
 }

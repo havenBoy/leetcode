@@ -1,6 +1,8 @@
 package com.leetcode.other;
 
 import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Collectors;
 
 public class ArrayProblems {
 
@@ -58,6 +60,24 @@ public class ArrayProblems {
 
     public static void quickSort(int[] arr) {
 
+    }
+
+    /**
+     * 数组转链表方法
+     * @param arr 数组
+     * @return 链表
+     */
+    public static List<Integer> arr2List(int[] arr) {
+        return Arrays.stream(arr).boxed().collect(Collectors.toList());
+    }
+
+    /**
+     * 链表转数组方法
+     * @param list 链表
+     * @return 数组
+     */
+    public static int[] list2Arr(List<Integer> list) {
+        return list.stream().mapToInt(Integer::intValue).toArray();
     }
 
 
