@@ -1,8 +1,9 @@
 package com.leetcode.leet_problems.Top_K;
 
 
-import java.util.Comparator;
-import java.util.PriorityQueue;
+import java.util.*;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
 
 public class Test414_thirdMax {
 
@@ -40,26 +41,37 @@ public class Test414_thirdMax {
 
     /**
      * 第二种解决方式
+     * 最普遍的解决方式，缺点是会出现重复的数字
      * @param nums 输入数组
      * @return 返回值
      */
-    public static int thirdMax1(int[] nums) {
+    public static int thirdMaxNew(int[] nums) {
         PriorityQueue<Integer> queue = new PriorityQueue<>(3, (Comparator.comparingInt(o -> o)));
-        for (int i = 0; i < 3; i++) {
-            queue.add(nums[i]);
-        }
-        for (int i = 3; i < nums.length; i++) {
-            if (queue.peek() < nums[i]) {
+        for (int num : nums) {
+            if (queue.size() < 3) {
+                queue.offer(num);
+            } else if (queue.peek() <= num) {
                 queue.poll();
-                queue.offer(nums[i]);
+                queue.offer(num);
             }
         }
         return queue.poll();
     }
 
+    public static int thirdMaxNew(int[] nums, int k) {
+        List<Integer> set = new ArrayList<>();
+        for (int num : nums) {
+            set.add(num);
+        }
+        List<Integer> collect = set.stream().sorted().collect(Collectors.toList());
+        return collect.size() >= k ? collect.get(collect.size()-k) : collect.get(collect.size()-1);
+    }
+
     public static void main(String[] args) {
-        int[] nums = new int[]{2, 2, 3, 1};
-        System.out.println(thirdMax(nums));
-        System.out.println(thirdMax1(nums));
+        int[] nums1 = new int[]{20, 20, 30, 1, 30};
+        System.out.println(thirdMax(nums1));
+        System.out.println(thirdMaxNew(nums1));
+        System.out.println(thirdMaxNew(nums1, 3));
+
     }
 }
