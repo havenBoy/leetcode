@@ -12,6 +12,11 @@ public class Test1762_findBuildings {
      * 返回能看到海景建筑物的下标列表（下标 从 0 开始 ），并按升序排列。
      */
 
+    /**
+     * 借助栈的结构来完成
+     * @param heights 表示数组
+     * @return 返回可以看到下标的集合数组
+     */
     public static int[] findBuildings(int[] heights) {
         List<Integer> list = new ArrayList<>();
         Deque<Integer> deque = new ArrayDeque<>();

@@ -4,9 +4,9 @@ public class Kmp {
 	
 	/**
 	 * 暴力的匹配方法 (Implement strStr() 问题解决)
-	 * @param string
-	 * @param substring
-	 * @return
+	 * @param haystack  主体字符串
+	 * @param needle  待匹配字符串
+	 * @return 返回起始下标值
 	 */
 	public static int NotKmp(String haystack, String needle) {
 		int str = haystack.length();
@@ -27,16 +27,17 @@ public class Kmp {
 	
 	/**
 	 * 正式的KMP算法   理解next数组的含义
-	 * @param string
-	 * @param substring
-	 * @param next
-	 * @return
+	 * @param string 主体字符串
+	 * @param substring 待匹配字符串
+	 * @param next 下个数组 TODO
+	 * @return 返回下标
 	 */
-//	public static int Kmp(String string, String substring, int[] next) {
-//		int str = string.length();
-//		int sub = substring.length();
-//		int i = 0, j = 0;
-//	}
+	public static int Kmp(String string, String substring, int[] next) {
+		int str = string.length();
+		int sub = substring.length();
+		int i = 0, j = 0;
+		return 0;
+	}
 	
 	public static void main(String[] args) {
 		String string = "BBC ABCDAB ABCDABCDABDE", substring="ABCDABD";

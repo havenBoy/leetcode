@@ -165,27 +165,6 @@ public class Test03 {
 
     /**
      * LeetCode:
-     * 27.移除目标元素
-     * 将数组中非目标元素移动到数组的前方
-     * 思路：双指针法
-     * array  数组
-     * target 目标数字
-     * @return
-     */
-
-    public static int removeElement(int[] array, int target) {
-        int start = 0;
-        for (int end = 0; end < array.length; end++) {
-            if (target != array[end]) {
-                array[start] = array[end];
-                start++;
-            }
-        }
-        return start;
-    }
-
-    /**
-     * LeetCode:
      * 26.移除重复元素
      * 将排序数组中重复的元素删除，使得元素只出现一次,返回数组最终长度
      * 思路：双指针法

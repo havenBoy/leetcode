@@ -2,15 +2,19 @@ package com.leetcode.leet_problems;
 
 public class Test91_numbDecoding {
 
-    /**
-     * 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）。
+    /*
+     * 题目描述：
+     * 要 解码 已编码的消息，所有数字必须基于上述映射的方法，反向映射回字母（可能有多种方法）
      * 例如，"11106" 可以映射为
      * "AAJF" ，将消息分组为 (1 1 10 6)
      * "KJF" ，将消息分组为 (11 10 6)
-     * 注意，消息不能分组为  (1 11 06) ，因为 "06" 不能映射为 "F" ，
-     * 这是由于 "6" 和 "06" 在映射中并不等价。
+     * 注意，消息不能分组为  (1 11 06) ，因为 "06" 不能映射为 "F"
+     * 这是由于 "6" 和 "06" 在映射中并不等价
      * 给你一个只含数字的非空字符串 s ，请计算并返回解码方法的总数
      * 例如 226 可以有三种，2|2|6，22|6，2|26
+     */
+
+    /**
      * @param s 给出一个字符串
      * @return 返回拆法的个数
      */
@@ -34,7 +38,8 @@ public class Test91_numbDecoding {
             return 0;
         }
         return numbDecoding(s.substring(0, length-2))
-                + (numbDecoding(s.substring(length-1)) + numbDecoding(s.substring(length-2, s.length()-1)) == 2 ? 0 : 1)
+                + (numbDecoding(s.substring(length-1))
+                + numbDecoding(s.substring(length-2, s.length()-1)) == 2 ? 0 : 1)
                 + numbDecoding(s.substring(length-2));
     }
 
@@ -63,6 +68,5 @@ public class Test91_numbDecoding {
     public static void main(String[] args) {
         String str = "206";
         System.out.println(numbDecoding2(str));
-        int[] arr = {73, 74, 75, 71, 69, 72, 76, 73};
     }
 }

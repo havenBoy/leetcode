@@ -3,6 +3,7 @@ package com.leetcode.leet_problems;
 public class Test29_divide {
 
     /*
+     * 题目描述：
      * 不使用除法，实现除法
      */
 
@@ -17,13 +18,13 @@ public class Test29_divide {
         if (dividend == 0 | divisor == 0) {
             return 0;
         }
-        if (dividend != 0 && divisor > 0) {
+        if (divisor > 0) {
             do {
                 sum += divisor;
                 res++;
             } while (sum < dividend);
             res -= 1;
-        } else if (dividend > 0 && divisor < 0) {
+        } else if (dividend > 0) {
             do {
                 sum += (-divisor);
                 res--;

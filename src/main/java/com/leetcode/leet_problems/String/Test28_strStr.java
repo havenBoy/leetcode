@@ -1,4 +1,4 @@
-package com.leetcode.leet_problems;
+package com.leetcode.leet_problems.String;
 
 public class Test28_strStr {
 
