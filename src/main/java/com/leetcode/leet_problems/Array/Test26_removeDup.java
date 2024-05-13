@@ -1,4 +1,4 @@
-package com.leetcode.leet_problems;
+package com.leetcode.leet_problems.Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,9 +33,28 @@ public class Test26_removeDup {
         return index;
     }
 
+    /**
+     * 原地删除重复的数字，并返回不重复数字的个数
+     * @param arr 传入数组
+     * @return 返回不重复数字个数
+     */
+    public static int removeDup2(int[] arr) {
+        if (arr.length <= 1) return arr.length;
+        int num = arr[1], index = 1;
+        for (int i = 2; i <= arr.length - 1; i++) {
+            if (arr[i] > num) {
+                arr[index] = arr[i];
+                num = Math.max(arr[index], arr[index+1]);
+                index++;
+            }
+        }
+        return index;
+    }
+
     public static void main(String[] args) {
-        int[] brr = new int[]{2,2,2,1,1,2,2,3,3,5};
+        int[] brr = new int[]{1,1,2,2,3,3,3,5,10};
         System.out.println(removeDup(brr));
+        System.out.println(removeDup2(brr));
         System.out.println(Arrays.toString(brr));
     }
 }
