@@ -1,5 +1,7 @@
 package com.leetcode.old;
 
+import java.util.Arrays;
+
 /***
  * 写出所有的排序算法
  * @author Eric
@@ -134,8 +136,9 @@ public class Sort {
 		//Utils.show(bubbleSort(nums));
 		//sortColor(nums);
 		//selectSort(nums);
-		//quickSort(nums, 0, nums.length-1);
-		insertSort(nums);
-		Utils.show(nums);
+		quickSort(nums, 0, nums.length-1);
+		System.out.println(Arrays.toString(nums));
+//		insertSort(nums);
+//		Utils.show(nums);
 	}
 }
